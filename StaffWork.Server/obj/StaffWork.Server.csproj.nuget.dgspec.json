@@ -1,0 +1,234 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\StaffWork.Server.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\dro1l\\source\\repos\\StaffWork\\BusinessLogic\\BusinessLogic.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\BusinessLogic\\BusinessLogic.csproj",
+        "projectName": "BusinessLogic",
+        "projectPath": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\BusinessLogic\\BusinessLogic.csproj",
+        "packagesPath": "C:\\Users\\dro1l\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\BusinessLogic\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\dro1l\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\dro1l\\source\\repos\\StaffWork\\MSSQLProvider\\MSSQLProvider.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\MSSQLProvider\\MSSQLProvider.csproj",
+        "projectName": "MSSQLProvider",
+        "projectPath": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\MSSQLProvider\\MSSQLProvider.csproj",
+        "packagesPath": "C:\\Users\\dro1l\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\MSSQLProvider\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\dro1l\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\dro1l\\source\\repos\\StaffWork\\BusinessLogic\\BusinessLogic.csproj": {
+                "projectPath": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\BusinessLogic\\BusinessLogic.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\StaffWork.Server.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\StaffWork.Server.csproj",
+        "projectName": "StaffWork.Server",
+        "projectPath": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\StaffWork.Server.csproj",
+        "packagesPath": "C:\\Users\\dro1l\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\dro1l\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\dro1l\\source\\repos\\StaffWork\\BusinessLogic\\BusinessLogic.csproj": {
+                "projectPath": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\BusinessLogic\\BusinessLogic.csproj"
+              },
+              "C:\\Users\\dro1l\\source\\repos\\StaffWork\\MSSQLProvider\\MSSQLProvider.csproj": {
+                "projectPath": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\MSSQLProvider\\MSSQLProvider.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
+            "GraphQL": {
+              "target": "Package",
+              "version": "[4.7.1, )"
+            },
+            "GraphQL.MicrosoftDI": {
+              "target": "Package",
+              "version": "[4.7.1, )"
+            },
+            "GraphQL.Server.Authorization.AspNetCore": {
+              "target": "Package",
+              "version": "[5.2.0, )"
+            },
+            "GraphQL.Server.Transports.AspNetCore": {
+              "target": "Package",
+              "version": "[5.2.1, )"
+            },
+            "GraphQL.Server.Transports.AspNetCore.SystemTextJson": {
+              "target": "Package",
+              "version": "[5.2.1, )"
+            },
+            "GraphQL.Server.Ui.Altair": {
+              "target": "Package",
+              "version": "[7.1.1, )"
+            },
+            "Microsoft.AspNetCore.SpaServices.Extensions": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.25.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

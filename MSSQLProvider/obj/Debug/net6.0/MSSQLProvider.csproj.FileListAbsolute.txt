@@ -1,0 +1,15 @@
+C:\Users\dro1l\source\repos\StaffWork\MSSQLProvider\bin\Debug\net6.0\MSSQLProvider.deps.json
+C:\Users\dro1l\source\repos\StaffWork\MSSQLProvider\bin\Debug\net6.0\MSSQLProvider.dll
+C:\Users\dro1l\source\repos\StaffWork\MSSQLProvider\bin\Debug\net6.0\MSSQLProvider.pdb
+C:\Users\dro1l\source\repos\StaffWork\MSSQLProvider\bin\Debug\net6.0\BusinessLogic.dll
+C:\Users\dro1l\source\repos\StaffWork\MSSQLProvider\bin\Debug\net6.0\BusinessLogic.pdb
+C:\Users\dro1l\source\repos\StaffWork\MSSQLProvider\obj\Debug\net6.0\MSSQLProvider.csproj.AssemblyReference.cache
+C:\Users\dro1l\source\repos\StaffWork\MSSQLProvider\obj\Debug\net6.0\MSSQLProvider.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dro1l\source\repos\StaffWork\MSSQLProvider\obj\Debug\net6.0\MSSQLProvider.AssemblyInfoInputs.cache
+C:\Users\dro1l\source\repos\StaffWork\MSSQLProvider\obj\Debug\net6.0\MSSQLProvider.AssemblyInfo.cs
+C:\Users\dro1l\source\repos\StaffWork\MSSQLProvider\obj\Debug\net6.0\MSSQLProvider.csproj.CoreCompileInputs.cache
+C:\Users\dro1l\source\repos\StaffWork\MSSQLProvider\obj\Debug\net6.0\MSSQLProvider.csproj.CopyComplete
+C:\Users\dro1l\source\repos\StaffWork\MSSQLProvider\obj\Debug\net6.0\MSSQLProvider.dll
+C:\Users\dro1l\source\repos\StaffWork\MSSQLProvider\obj\Debug\net6.0\refint\MSSQLProvider.dll
+C:\Users\dro1l\source\repos\StaffWork\MSSQLProvider\obj\Debug\net6.0\MSSQLProvider.pdb
+C:\Users\dro1l\source\repos\StaffWork\MSSQLProvider\obj\Debug\net6.0\ref\MSSQLProvider.dll
