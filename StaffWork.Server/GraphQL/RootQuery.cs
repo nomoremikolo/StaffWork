@@ -1,4 +1,6 @@
 ﻿using GraphQL.Types;
+using StaffWork.Server.GraphQL.Authorization;
+using StaffWork.Server.GraphQL.User;
 
 namespace StaffWork.Server.GraphQL
 {
@@ -6,7 +8,13 @@ namespace StaffWork.Server.GraphQL
     {
         public RootQuery()
         {
+            Field<UserQueries>()
+                .Name("User")
+                .Resolve(_ => new { });
 
+            Field<AuthorizationQueries>()
+             .Name("Authorization")
+             .Resolve(_ => new { });
         }
     }
 }

@@ -25,7 +25,7 @@ namespace MSSQLProvider
                 connection.Open();
 
                 var queryResult = connection.QueryFirstOrDefault(@"
-                    insert into [User] 
+                    insert into [dbo].[User] 
                     (Username, PasswordHash, PasswordSalt, Name, Surname, IsActivated, Age, Adress, Email, Role, Permissions)
                     VALUES 
                     (@Username, @PasswordHash, @PasswordSalt, @Name, @Surname, @IsActivated, @Age, @Adress, @Email, @Role, @Permissions)
@@ -44,8 +44,8 @@ namespace MSSQLProvider
                     Role = user.Role,
                     Permissions = user.Permissions ?? "",
                 });
-
-                var addedUser = GetUserById(queryResult.Id);
+                var Id = (int)queryResult.Id;
+                var addedUser = GetUserById(Id);
 
                 return addedUser;
             }
@@ -147,11 +147,10 @@ namespace MSSQLProvider
             {
                 connection.Open();
                 var result = connection.QueryFirstOrDefault<UserModel>(
-                    @"select * from [User]
-                    where Username = @Username",
+                    @"select * from [User] where [Username] = @Username",
                     new
                     {
-                        Username = username
+                        @Username = username
                     });
                 return result;
             }
@@ -183,11 +182,12 @@ namespace MSSQLProvider
                     Adress = @Adress,
                     Email = @Email,
                     Role = @Role,
-                    Permissions = @Permissions,
+                    Permissions = @Permissions
                     WHERE 
                     Id = @Id",
                     new
                     {
+                        Id = user.Id,
                         Username = user.Username,
                         PasswordHash = user.PasswordHash,
                         PasswordSalt = user.PasswordSalt,

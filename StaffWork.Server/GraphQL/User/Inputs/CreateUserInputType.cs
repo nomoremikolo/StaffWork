@@ -1,0 +1,46 @@
+﻿using GraphQL.Types;
+
+namespace StaffWork.Server.GraphQL.User.Inputs
+{
+    public class CreateUserInputType : InputObjectGraphType<CreateUserInput>
+    {
+        public CreateUserInputType()
+        {
+            Field<NonNullGraphType<StringGraphType>, string>()
+                        .Name("Name")
+                        .Resolve(ctx => ctx.Source.Name);
+
+            Field<NonNullGraphType<StringGraphType>, string>()
+                       .Name("Surname")
+                       .Resolve(ctx => ctx.Source.Surname);
+
+            Field<NonNullGraphType<StringGraphType>, string>()
+                       .Name("Username")
+                       .Resolve(ctx => ctx.Source.Username);
+
+            Field<IntGraphType, int?>()
+                       .Name("Age")
+                       .Resolve(ctx => ctx.Source.Age);
+
+            Field<NonNullGraphType<StringGraphType>, string>()
+                       .Name("Password")
+                       .Resolve(ctx => ctx.Source.Password);
+
+            Field<StringGraphType, string?>()
+                       .Name("Email")
+                       .Resolve(ctx => ctx.Source.Email);
+
+            Field<StringGraphType, string?>()
+                       .Name("Adress")
+                       .Resolve(ctx => ctx.Source.Adress);
+
+            Field<NonNullGraphType<StringGraphType>, string>()
+                       .Name("Role")
+                       .Resolve(ctx => ctx.Source.Role);
+
+            Field<NonNullGraphType<ListGraphType<IntGraphType>>, List<int>>()
+                       .Name("Permissions")
+                       .Resolve(ctx => ctx.Source.Permissions);
+        }
+    }
+}

@@ -1,4 +1,5 @@
 ﻿using BusinessLogic.Models;
+using static BusinessLogic.Enums.UserPolicyPermissions;
 
 namespace StaffWork.Server.JwtAuthorization
 {
@@ -8,51 +9,24 @@ namespace StaffWork.Server.JwtAuthorization
         {
             return user;
         }
-        //public static UserModel? GetUsers(UserModel user)
-        //{
-        //    var permissionKey = ((int)PermissionsEnum.GetUsers).ToString();
+        public static UserModel? GetUsers(UserModel user)
+        {
+            var permissionKey = ((int)PermissionsEnum.GetUsers).ToString();
 
-        //    if (user.Permissions.Split(" ").Contains(permissionKey))
-        //    {
-        //        return user;
-        //    }
-        //    return null;
-        //}
-        //public static UserModel? PartTimer(UserModel user)
-        //{
-        //    if (user.IsPartTimer)
-        //    {
-        //        return user;
-        //    }
-        //    return null;
-        //}
-        //public static UserModel? UsersCRUD(UserModel user)
-        //{
-        //    var permissionKey = ((int)PermissionsEnum.UsersCRUD).ToString();
-        //    if (user.Permissions.Split(" ").Contains(permissionKey))
-        //    {
-        //        return user;
-        //    }
-        //    return null;
-        //}
-        //public static UserModel? TimerItemsCRUD(UserModel user)
-        //{
-        //    var permissionKey = ((int)PermissionsEnum.TimerItemsCRUD).ToString();
-        //    if (user.Permissions.Split(" ").Contains(permissionKey))
-        //    {
-        //        return user;
-        //    }
-        //    return null;
-        //}
-
-        //public static UserModel? VacationsList(UserModel user)
-        //{
-        //    var permissionKey = ((int)PermissionsEnum.VacationsList).ToString();
-        //    if (user.Permissions.Split(" ").Contains(permissionKey))
-        //    {
-        //        return user;
-        //    }
-        //    return null;
-        //}
+            if (user.Permissions.Split(" ").Contains(permissionKey))
+            {
+                return user;
+            }
+            return null;
+        }
+        public static UserModel? UsersCRUD(UserModel user)
+        {
+            var permissionKey = ((int)PermissionsEnum.UsersCRUD).ToString();
+            if (user.Permissions.Split(" ").Contains(permissionKey))
+            {
+                return user;
+            }
+            return null;
+        }
     }
 }

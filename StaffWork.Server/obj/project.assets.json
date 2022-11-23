@@ -1091,6 +1091,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "BusinessLogic": "1.0.0",
+          "Dapper": "2.0.123",
           "System.Data.SqlClient": "4.8.5"
         },
         "compile": {

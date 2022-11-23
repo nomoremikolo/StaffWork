@@ -1,4 +1,5 @@
 using StaffWork.Server;
+using StaffWork.Server.GraphQL;
 using StaffWork.Server.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -34,7 +35,7 @@ app.UseStaticFiles();
 app.UseCors("DefaultPolicy");
 app.UseRouting();
 app.UseGraphQLAltair();
-//app.UseGraphQL<TimeManagerSchema>();
+app.UseGraphQL<StaffScheme>();
 
 app.UseSpa(spa =>
 {
