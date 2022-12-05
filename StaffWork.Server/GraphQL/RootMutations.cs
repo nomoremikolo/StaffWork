@@ -1,4 +1,5 @@
 ﻿using GraphQL.Types;
+using StaffWork.Server.GraphQL.Authorization;
 using StaffWork.Server.GraphQL.User;
 
 namespace StaffWork.Server.GraphQL
@@ -10,6 +11,9 @@ namespace StaffWork.Server.GraphQL
             Field<UserMutations>()
                .Name("User")
                .Resolve(_ => new { });
+            Field<AuthorizationMutation>()
+             .Name("Authorization")
+             .Resolve(_ => new { });
         }
     }
 }
