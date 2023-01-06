@@ -25,16 +25,7 @@ namespace BusinessLogic.Models
         public string? Adress { get; set; }
         public string? Email { get; set; }
         public string Role { get; set; } = "User";
-        public string Permissions { get; set; }
+        public string Permissions { get; set; } = "";
 
-        public NewUserModel(string username, string password, string email, string name, string surname, string permissions)
-        {
-            Username = username;
-            Password = password;
-            Email = email;
-            Name = name;
-            Surname = surname;
-            Permissions = permissions;
-        }
     }
 }

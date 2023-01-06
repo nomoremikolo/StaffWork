@@ -11,7 +11,14 @@ namespace StaffWork.Server.Services
             {
                 return new UserDataProvider(configuration["ConnectionStrings:default"]);
             });
-
+            services.AddTransient<IWareDataProvider>(provider =>
+            {
+                return new WareDataProvider(configuration["ConnectionStrings:default"]);
+            });
+            services.AddTransient<IFavoriteDataProvider>(provider =>
+            {
+                return new FavoriteDataProvider(configuration["ConnectionStrings:default"]);
+            });
             return services;
         }
     }

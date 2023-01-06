@@ -1,4 +1,5 @@
-﻿using GraphQL;
+﻿using BusinessLogic;
+using GraphQL;
 using GraphQL.Server;
 using StaffWork.Server.GraphQL;
 using StaffWork.Server.JwtAuthorization;
@@ -40,9 +41,8 @@ namespace StaffWork.Server.Services
             services.AddTransient<IAuthorizationProvider, AuthorizationProvider>();
             services.AddTransient<IJwtUtils, JwtUtils>();
             services.AddTransient<IUserProvider, UserProvider>();
-            //services.AddTransient<ITimerItemProvider, TimerItemProvider>();
-            //services.AddTransient<IVacationProvider, VacationsProvider>();
-            //services.AddTransient<ICalendarProvider, CalendarProvider>();
+            services.AddTransient<IWareProvider, WareProvider>();
+            //services.AddTransient<IFavoriteDataProvider>();
             services.AddTransient<ICookiesHelper, CookiesHelper>();
             services.AddTransient<IHashHelper, HashHelper>();
             return services;

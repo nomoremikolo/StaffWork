@@ -10,7 +10,7 @@ namespace StaffWork.Server.Providers.Interfaces
         //CRUDUserResponse? GetUserById(int userId);
         //int GetCountOfUsers();
         //int GetCountOfUsersForSearch(string searchName);
-        CRUDUserResponse ToRegister(NewUserModel user);
+        CRUDUserResponse CreateUser(NewUserModel user);
         //CRUDUserResponse UpdateUserInfo(UpdateUserInfoModel user);
         //CRUDUserResponse UpdateUserSelfInfo(UpdateUserInfoModel updatedUser, UserModel userInDb);
         //CRUDUserResponse UpdateUserSelfPassword(UpdateUserPasswordModel updatedPassword, UserModel userInDb);

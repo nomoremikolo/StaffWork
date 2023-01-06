@@ -27,7 +27,7 @@ namespace StaffWork.Server.Providers
             return userDBProvider.GetUsers();
         }
 
-        public CRUDUserResponse ToRegister(NewUserModel user)
+        public CRUDUserResponse CreateUser(NewUserModel user)
         {
             var response = new CRUDUserResponse();
 

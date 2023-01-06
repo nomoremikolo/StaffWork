@@ -182,7 +182,8 @@ namespace MSSQLProvider
                     Adress = @Adress,
                     Email = @Email,
                     Role = @Role,
-                    Permissions = @Permissions
+                    Permissions = @Permissions,
+                    RefreshToken = @RefreshToken
                     WHERE 
                     Id = @Id",
                     new
@@ -191,6 +192,7 @@ namespace MSSQLProvider
                         Username = user.Username,
                         PasswordHash = user.PasswordHash,
                         PasswordSalt = user.PasswordSalt,
+                        RefreshToken = user.RefreshToken,
                         Name = user.Name,
                         Surname = user.Surname,
                         IsActivated = user.IsActivated,

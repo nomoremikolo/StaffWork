@@ -13,6 +13,6 @@ namespace BusinessLogic
         public WareModel UpdateWare(WareModel updatedWare);
         public WareModel DeleteWare(int wareId);
         public WareModel GetWareById(int wareId);
-        public List<WareModel> GetAllWares();
+        public List<WareModel> GetAllWares(QuerySettings settings);
     }
 }

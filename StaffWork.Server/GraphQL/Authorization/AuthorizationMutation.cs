@@ -2,6 +2,7 @@
 using GraphQL;
 using GraphQL.Types;
 using StaffWork.Server.GraphQL.Authorization.Types;
+using StaffWork.Server.JwtAuthorization;
 using StaffWork.Server.JwtAuthorization.Interfaces;
 using StaffWork.Server.Providers.Interfaces;
 
@@ -32,6 +33,34 @@ namespace StaffWork.Server.GraphQL.Authorization
                     return queryResponse;
                 }
                 );
+
+            Field<NonNullGraphType<SignOutQueryResponseType>, SignOutQueryResponse>()
+               .Name("SignOut")
+               .Resolve(ctx =>
+               {
+                   var response = new SignOutQueryResponse();
+                   var authorizationResponse = authorizationProvider.AuthorizeUser(httpContextAccessor.HttpContext, AuthorizationPolicies.Authorized);
+                   if (authorizationResponse.StatusCode != 200)
+                   {
+                       response.StatusCode = authorizationResponse.StatusCode;
+                       response.Errors = authorizationResponse.Errors;
+                       return response;
+                   }
+
+                   try
+                   {
+                       response.User = authorizationProvider.SignOut(authorizationResponse.User);
+                   }
+                   catch (Exception)
+                   {
+                       response.StatusCode = 500;
+                       response.Errors.Add($"Database error");
+                       return response;
+                   }
+                   response.StatusCode = 200;
+                   return response;
+               }
+               );
         }
     }
 }

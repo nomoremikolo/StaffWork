@@ -1,6 +1,7 @@
 ﻿using GraphQL.Types;
 using StaffWork.Server.GraphQL.Authorization;
 using StaffWork.Server.GraphQL.User;
+using StaffWork.Server.GraphQL.Ware;
 
 namespace StaffWork.Server.GraphQL
 {
@@ -14,6 +15,10 @@ namespace StaffWork.Server.GraphQL
 
             Field<AuthorizationQueries>()
              .Name("Authorization")
+             .Resolve(_ => new { });
+
+            Field<WareQueries>()
+             .Name("Ware")
              .Resolve(_ => new { });
         }
     }
