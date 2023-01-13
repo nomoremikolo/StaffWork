@@ -18,6 +18,12 @@ namespace StaffWork.Server.Services
             services.AddTransient<IFavoriteDataProvider>(provider =>
             {
                 return new FavoriteDataProvider(configuration["ConnectionStrings:default"]);
+
+            });
+            services.AddTransient<IBasketDataProvider>(provider =>
+            {
+                return new BasketDataProvider(configuration["ConnectionStrings:default"]);
+
             });
             return services;
         }

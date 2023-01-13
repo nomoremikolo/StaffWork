@@ -1,7 +1,7 @@
 ﻿using BusinessLogic.Models;
 using GraphQL.Types;
 
-namespace StaffWork.Server.GraphQL.Ware.Types
+namespace StaffWork.Server.GraphQL.Ware.Output
 {
     public class WareType : ObjectGraphType<WareModel>
     {

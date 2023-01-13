@@ -42,7 +42,7 @@ namespace StaffWork.Server.Services
             services.AddTransient<IJwtUtils, JwtUtils>();
             services.AddTransient<IUserProvider, UserProvider>();
             services.AddTransient<IWareProvider, WareProvider>();
-            //services.AddTransient<IFavoriteDataProvider>();
+            services.AddTransient<IBasketProvider, BasketProvider>();
             services.AddTransient<ICookiesHelper, CookiesHelper>();
             services.AddTransient<IHashHelper, HashHelper>();
             return services;

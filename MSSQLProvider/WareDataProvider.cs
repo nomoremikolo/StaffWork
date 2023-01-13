@@ -72,6 +72,8 @@ namespace MSSQLProvider
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
+                
+                var resultList = new List<WareModel>();
                 string filter = "";
                 switch (settings.Filter)
                 {
@@ -86,7 +88,7 @@ namespace MSSQLProvider
                 }
                 string reverse = "";
                 string cl = "";
-                if(settings.SortParam != null)
+                if (settings.SortParam != null)
                 {
                     reverse = settings.SortParam.IsReverse ? "DESC" : "";
                     cl = $"{settings.SortParam.Value} {reverse}";
@@ -96,8 +98,7 @@ namespace MSSQLProvider
                     cl = "Id";
                 }
                 var Category = settings.CategoryId != null ? " where CategoryId = " + settings.CategoryId : "";
-                var ss = $"select top (@countOfRecords) * from [Ware]{Category}{filter} ORDER BY {cl}";
-                var result = connection.Query<WareModel>(
+                resultList = connection.Query<WareModel>(
                 @$"
                     select top (@countOfRecords) * from [Ware]{Category}{filter} ORDER BY {cl}
                 ", new
@@ -105,10 +106,56 @@ namespace MSSQLProvider
                     @countOfRecords = settings.CountOfRecords,
                 }).ToList();
                 
-                return result;
+ 
+                
+                return resultList;
             }
         }
 
+        public List<AuthorizedUserWareModel> GetAllWaresWithFavorite(QuerySettings settings, int userId)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                //var ss = $"select top (@countOfRecords) * from [Ware]{Category}{filter} ORDER BY {cl}";
+                var resultList = new List<AuthorizedUserWareModel>();
+                string filter = "";
+                switch (settings.Filter)
+                {
+                    case FilterEnum.Discount:
+                        filter = settings.CategoryId != null ? " and IsDiscount = 1" : " where IsDiscount = 1";
+                        break;
+                    case FilterEnum.Novelty:
+                        filter = settings.CategoryId != null ? $" and id > (select max(Id-{settings.CountOfRecords}) from Ware)" : $" where id > (select max(Id-{settings.CountOfRecords}) from Ware)";
+                        break;
+                    default:
+                        break;
+                }
+                string reverse = "";
+                string cl = "";
+                if (settings.SortParam != null)
+                {
+                    reverse = settings.SortParam.IsReverse ? "DESC" : "";
+                    cl = $"{settings.SortParam.Value} {reverse}";
+                }
+                else
+                {
+                    cl = "Id";
+                }
+                var Category = settings.CategoryId != null ? " where CategoryId = " + settings.CategoryId : "";
+                resultList = connection.Query<AuthorizedUserWareModel>(
+                @$"
+                    select top (@countOfRecords) t2.IsFavorite, t1.Id, t1.Name, t1.BrandId, t1.CategoryId, t1.Description, t1.Sizes, t1.Price, t1.OldPrice, t1.IsDiscount, t1.CountInStorage from [Ware] t1 left join Favorites t2 on t1.Id = t2.WareId and t2.UserId = @UserId{Category}{filter} ORDER BY {cl}
+                    ", new
+                {
+                    @countOfRecords = settings.CountOfRecords,
+                    @UserId = userId,
+                }).ToList();
+
+                return resultList;
+            }
+        }
         public WareModel GetWareById(int wareId)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))

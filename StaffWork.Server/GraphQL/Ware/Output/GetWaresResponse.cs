@@ -1,6 +1,6 @@
 ﻿using BusinessLogic.Models;
 
-namespace StaffWork.Server.GraphQL.Ware.Types
+namespace StaffWork.Server.GraphQL.Ware.Output
 {
     public class GetWaresResponse
     {

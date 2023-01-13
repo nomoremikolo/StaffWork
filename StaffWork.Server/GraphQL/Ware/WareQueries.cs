@@ -3,7 +3,7 @@ using BusinessLogic.Models;
 using GraphQL;
 using GraphQL.Types;
 using StaffWork.Server.GraphQL.Ware.Inputs;
-using StaffWork.Server.GraphQL.Ware.Types;
+using StaffWork.Server.GraphQL.Ware.Output;
 using StaffWork.Server.JwtAuthorization;
 using StaffWork.Server.JwtAuthorization.Interfaces;
 using StaffWork.Server.Providers.Interfaces;
@@ -12,7 +12,7 @@ namespace StaffWork.Server.GraphQL.Ware
 {
     public class WareQueries : ObjectGraphType
     {
-        public WareQueries(IMapper mapper, ICookiesHelper cookiesHelper, IAuthorizationProvider authorizationProvider,  IWareProvider wareProvider, IHttpContextAccessor httpContextAccessor)
+        public WareQueries(IMapper mapper,IBasketProvider basketProvider,  ICookiesHelper cookiesHelper, IAuthorizationProvider authorizationProvider,  IWareProvider wareProvider, IHttpContextAccessor httpContextAccessor)
         {
             Field<NonNullGraphType<GetWaresResponseType>, GetWaresResponse>()
                 .Name("GetAllWares")
@@ -40,6 +40,32 @@ namespace StaffWork.Server.GraphQL.Ware
                     return response;
                 }
                 );
+            Field<NonNullGraphType<GetAuthorizedUserWaresResponseType>, GetAuthorizedUserWaresResponse>()
+                 .Name("GetAllWaresAuthorized")
+                 .Argument<QuerySettingsInputType>("settings", "Query settings")
+                 .Resolve(context =>
+                 {
+                     var response = new GetAuthorizedUserWaresResponse();
+
+                     try
+                     {
+                         var settings = context.GetArgument<QuerySettings>("settings");
+                         if (settings == null)
+                         {
+                             settings = new QuerySettings();
+                         }
+                         response = wareProvider.GetAllWaresWithFavorite(settings);
+                     }
+                     catch (Exception)
+                     {
+                         response.StatusCode = 500;
+                         response.Errors.Add($"Database error");
+                         return response;
+                     }
+                     response.StatusCode = 200;
+                     return response;
+                 }
+                 );
 
             Field<NonNullGraphType<CRUDWareResponseType>, CRUDWareResponse>()
                 .Name("GetWareById")
@@ -79,11 +105,6 @@ namespace StaffWork.Server.GraphQL.Ware
                     }
                     try
                     {
-                        var settings = context.GetArgument<QuerySettings>("settings");
-                        if (settings == null)
-                        {
-                            settings = new QuerySettings();
-                        }
                         response = wareProvider.GetUserFavoriteWares();
                     }
                     catch (Exception)
@@ -96,6 +117,18 @@ namespace StaffWork.Server.GraphQL.Ware
                     return response;
                 }
                 );
+            Field<NonNullGraphType<GetBasketWaresResponseType>, GetBasketWaresResponse>()
+                .Name("GetWaresFromBasket")
+                .Resolve(context =>
+                {
+                    var response = new GetBasketWaresResponse();
+
+                    response = basketProvider.GetAllBasketWares();
+
+                    return response;
+                }
+                );
+
         }
     }
 }
