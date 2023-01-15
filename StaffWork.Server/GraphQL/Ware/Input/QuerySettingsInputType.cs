@@ -23,6 +23,10 @@ namespace StaffWork.Server.GraphQL.Ware.Inputs
             Field<StringGraphType, FilterEnum?>()
                 .Name("Filter")
                 .Resolve(ctx => ctx.Source.Filter);
+
+            Field<StringGraphType, string?>()
+                .Name("KeyWords")
+                .Resolve(ctx => ctx.Source.KeyWords);
         }
     }
 }

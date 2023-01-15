@@ -41,6 +41,14 @@ namespace StaffWork.Server.GraphQL.Ware.Inputs
             Field<NonNullGraphType<IntGraphType>, int>()
                 .Name("CountInStorage")
                 .Resolve(ctx => ctx.Source.CountInStorage);
+
+            Field<StringGraphType, string?>()
+                .Name("Thumbnail")
+                .Resolve(ctx => ctx.Source.Thumbnail);
+
+            Field<StringGraphType, string?>()
+                .Name("Images")
+                .Resolve(ctx => ctx.Source.Images);
         }
     }
 }

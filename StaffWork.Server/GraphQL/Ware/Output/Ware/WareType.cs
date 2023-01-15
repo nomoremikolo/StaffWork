@@ -1,18 +1,14 @@
 ﻿using BusinessLogic.Models;
 using GraphQL.Types;
 
-namespace StaffWork.Server.GraphQL.Ware.Output
+namespace StaffWork.Server.GraphQL.Ware.Output.Ware
 {
-    public class FavoriteWareType : ObjectGraphType<FavoriteWareModel>
+    public class WareType : ObjectGraphType<WareModel>
     {
-        public FavoriteWareType()
+        public WareType()
         {
             Field<NonNullGraphType<IntGraphType>, int>()
-               .Name("FavoriteId")
-               .Resolve(ctx => ctx.Source.FavoriteId);
-
-            Field<NonNullGraphType<IntGraphType>, int>()
-               .Name("WareId")
+               .Name("Id")
                .Resolve(ctx => ctx.Source.Id);
 
             Field<NonNullGraphType<StringGraphType>, string>()
@@ -50,6 +46,15 @@ namespace StaffWork.Server.GraphQL.Ware.Output
             Field<NonNullGraphType<IntGraphType>, int>()
                .Name("CountInStorage")
                .Resolve(ctx => ctx.Source.CountInStorage);
+
+            Field<StringGraphType, string?>()
+               .Name("Thumbnail")
+               .Resolve(ctx => ctx.Source.Thumbnail);
+
+            Field<StringGraphType, string?>()
+               .Name("Images")
+               .Resolve(ctx => ctx.Source.Images);
+
         }
     }
 }

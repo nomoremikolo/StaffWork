@@ -50,7 +50,7 @@ namespace MSSQLProvider
                 }
                 connection.Open();
                 var affectedRows = connection.Execute(
-                    @"delete from [Category] where
+                    @"delete from [Category]
                     where Id = @Id",
                     new
                     {
@@ -90,7 +90,7 @@ namespace MSSQLProvider
                 var affectedRows = connection.Execute(
                     @"UPDATE [Category]
                     SET 
-                    Name = @Name,
+                    Name = @Name
                     WHERE 
                     Id = @Id",
                     new

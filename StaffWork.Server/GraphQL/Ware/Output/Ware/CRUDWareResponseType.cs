@@ -1,11 +1,11 @@
 ﻿using BusinessLogic.Models;
 using GraphQL.Types;
 
-namespace StaffWork.Server.GraphQL.Ware.Output
+namespace StaffWork.Server.GraphQL.Ware.Output.Ware
 {
-    public class CRUDBasketResponseType : ObjectGraphType<CRUDBasketResponse>
+    public class CRUDWareResponseType : ObjectGraphType<CRUDWareResponse>
     {
-        public CRUDBasketResponseType()
+        public CRUDWareResponseType()
         {
             Field<ListGraphType<StringGraphType>, List<string>?>()
                .Name("Errors")
@@ -15,7 +15,7 @@ namespace StaffWork.Server.GraphQL.Ware.Output
                .Name("StatusCode")
                .Resolve(ctx => ctx.Source.StatusCode);
 
-            Field<BasketWareGraphType, BasketWareGraph?>()
+            Field<WareType, WareModel?>()
                .Name("Ware")
                .Resolve(ctx => ctx.Source.Ware);
         }

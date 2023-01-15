@@ -1,17 +1,24 @@
 ﻿using BusinessLogic.Models;
 using StaffWork.Server.GraphQL.Authorization.Types;
-using StaffWork.Server.GraphQL.Ware.Output;
+using StaffWork.Server.GraphQL.Ware.Output.Favorite;
+using StaffWork.Server.GraphQL.Ware.Output.Ware;
 
 namespace StaffWork.Server.Providers.Interfaces
 {
     public interface IWareProvider
     {
-        List<WareModel> GetAllWares(QuerySettings settings);
-        GetAuthorizedUserWaresResponse GetAllWaresWithFavorite(QuerySettings settings);
-        WareModel GetWareById(int id);
         CRUDWareResponse CreateWare(NewWareModel ware);
+        List<WareModel> GetAllWares(QuerySettings settings);
+        WareModel GetWareById(int id);
+        GetAuthorizedUserWaresResponse GetAllWaresWithFavorite(QuerySettings settings);
+        CRUDWareResponse DeleteWare(int id);
+
         CRUDWareResponse AddWareToFavorite(int wareId);
-        CRUDWareResponse RemoveWareFromFavorite(int wareId);
         GetFavoriteWaresResponse GetUserFavoriteWares();
+        CRUDWareResponse RemoveWareFromFavorite(int wareId);
+        
+
+
+        
     }
 }

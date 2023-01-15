@@ -1,14 +1,14 @@
 ﻿using BusinessLogic.Models;
 
-namespace StaffWork.Server.GraphQL.Ware.Output
+namespace StaffWork.Server.GraphQL.Ware.Output.Basket
 {
-    public class GetFavoriteWaresResponse
+    public class GetBasketWaresResponse
     {
-        public List<FavoriteWareModel> Wares { get; set; }
+        public List<BasketWareGraph> Wares { get; set; }
         public int StatusCode { get; set; }
         public List<string> Errors { get; set; }
 
-        public GetFavoriteWaresResponse()
+        public GetBasketWaresResponse()
         {
             Errors = new List<string>();
         }

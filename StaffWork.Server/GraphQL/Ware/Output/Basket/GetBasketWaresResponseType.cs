@@ -1,7 +1,7 @@
 ﻿using BusinessLogic.Models;
 using GraphQL.Types;
 
-namespace StaffWork.Server.GraphQL.Ware.Output
+namespace StaffWork.Server.GraphQL.Ware.Output.Basket
 {
     public class GetBasketWaresResponseType : ObjectGraphType<GetBasketWaresResponse>
     {

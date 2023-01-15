@@ -43,6 +43,8 @@ namespace StaffWork.Server.Services
             services.AddTransient<IUserProvider, UserProvider>();
             services.AddTransient<IWareProvider, WareProvider>();
             services.AddTransient<IBasketProvider, BasketProvider>();
+            services.AddTransient<ICategoryProvider, CategoryProvider>();
+            services.AddTransient<IBrandProvider, BrandProvider>();
             services.AddTransient<ICookiesHelper, CookiesHelper>();
             services.AddTransient<IHashHelper, HashHelper>();
             return services;

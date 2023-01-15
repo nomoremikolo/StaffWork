@@ -91,16 +91,29 @@ namespace MSSQLProvider
                 });
                 newBasketWare.BasketId = basket.Id;
 
-                    connection.QueryFirstOrDefault<BasketWare>(@"
-                    update basketware set count = @Count where WareId = @WareId and BasketId = @BasketId
-                    ", new
-                    {
-                        @WareId = newBasketWare.WareId,
-                        @BasketId = newBasketWare.@BasketId,
-                        @Count = newBasketWare.Count,
-                    });
-                    var addedWare = GetWareFromBasketById(newBasketWare.WareId, newBasketWare.UserId);
-                    return addedWare;
+                connection.QueryFirstOrDefault<BasketWare>(@"
+                update basketware set count = @Count where WareId = @WareId and BasketId = @BasketId
+                ", new
+                {
+                    @WareId = newBasketWare.WareId,
+                    @BasketId = newBasketWare.@BasketId,
+                    @Count = newBasketWare.Count,
+                });
+                var addedWare = GetWareFromBasketById(newBasketWare.WareId, newBasketWare.UserId);
+                return addedWare;
+            }
+        }
+
+        public BasketWareGraph ClearBasket(int userId)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                connection.Execute(@"delete from BasketWare where BasketId = (select Id from Basket where UserId = @UserId)", new
+                {
+                    UserId = userId,
+                });
+                return null;
             }
         }
 
@@ -133,6 +146,15 @@ namespace MSSQLProvider
                     {
                         @UserId = userId,
                     });
+                    foreach (var item in wares)
+                    {
+                        connection.Execute(@"update Ware set CountInStorage = (select CountInStorage from Ware where Id = @WareId)-@Count where Id = @WareId", new
+                        {
+                            @WareId = item.Id,
+                            @Count = item.Count
+                        });
+                    }
+
                 }
                 return wares;
             }

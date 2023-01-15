@@ -13,5 +13,6 @@ namespace BusinessLogic.Models
         public int? CategoryId { get; set; }
         public int? CountOfRecords { get; set; } = 10;
         public FilterEnum? Filter { get; set; }
+        public string? KeyWords { get; set; }
     }
 }

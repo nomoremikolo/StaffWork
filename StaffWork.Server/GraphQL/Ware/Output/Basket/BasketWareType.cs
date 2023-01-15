@@ -1,12 +1,16 @@
 ﻿using BusinessLogic.Models;
 using GraphQL.Types;
 
-namespace StaffWork.Server.GraphQL.Ware.Output
+namespace StaffWork.Server.GraphQL.Ware.Output.Basket
 {
-    public class NewBasketWareType : ObjectGraphType<NewBasketWareModel>
+    public class BasketWareType : ObjectGraphType<BasketWare>
     {
-        public NewBasketWareType()
+        public BasketWareType()
         {
+            Field<NonNullGraphType<IntGraphType>, int>()
+                .Name("Id")
+                .Resolve(ctx => ctx.Source.Id);
+
             Field<NonNullGraphType<IntGraphType>, int>()
                 .Name("WareId")
                 .Resolve(ctx => ctx.Source.WareId);

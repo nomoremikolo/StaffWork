@@ -2,7 +2,8 @@
 using BusinessLogic;
 using BusinessLogic.Models;
 using StaffWork.Server.GraphQL.Authorization.Types;
-using StaffWork.Server.GraphQL.Ware.Output;
+using StaffWork.Server.GraphQL.Ware.Output.Favorite;
+using StaffWork.Server.GraphQL.Ware.Output.Ware;
 using StaffWork.Server.JwtAuthorization;
 using StaffWork.Server.JwtAuthorization.Interfaces;
 using StaffWork.Server.Providers.Interfaces;
@@ -132,6 +133,20 @@ namespace StaffWork.Server.Providers
             }
 
             response.Wares = wareDataProvider.GetAllWaresWithFavorite(settings, authorizationResponse.User.Id);
+            return response;
+        }
+
+        public CRUDWareResponse DeleteWare(int id)
+        {
+            var response = new CRUDWareResponse();
+            var authorizationResponse = authorizationProvider.AuthorizeUser(httpContextAccessor.HttpContext, AuthorizationPolicies.Authorized);
+            if (authorizationResponse.StatusCode != 200)
+            {
+                response.StatusCode = authorizationResponse.StatusCode;
+                response.Errors = authorizationResponse.Errors;
+                return response;
+            }
+            response.Ware = wareDataProvider.DeleteWare(id);
             return response;
         }
     }

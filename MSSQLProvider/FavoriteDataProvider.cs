@@ -23,7 +23,15 @@ namespace MSSQLProvider
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-
+                var isInFavorite = connection.QueryFirstOrDefault<FavoriteWareModel>(@"select * from Favorites where WareId = @WareId and UserId = @UserId", new
+                {
+                    @WareId = model.WareId,
+                    @UserId = model.UserId,
+                });
+                if (isInFavorite != null)
+                {
+                    return isInFavorite;
+                }
                 var queryResult = connection.QueryFirstOrDefault(@"
                     insert into Favorites (WareId, UserId) values (@WareId, @UserId) SELECT SCOPE_IDENTITY() AS [Id];
                 ", new

@@ -1,23 +1,23 @@
 ﻿using BusinessLogic.Models;
 using GraphQL.Types;
 
-namespace StaffWork.Server.GraphQL.Ware.Output
+namespace StaffWork.Server.GraphQL.Ware.Output.Ware
 {
-    public class GetAuthorizedUserWaresResponseType : ObjectGraphType<GetAuthorizedUserWaresResponse>
+    public class GetWaresResponseType : ObjectGraphType<GetWaresResponse>
     {
-        public GetAuthorizedUserWaresResponseType()
+        public GetWaresResponseType()
         {
             Field<NonNullGraphType<IntGraphType>, int>()
               .Name("StatusCode")
               .Resolve(ctx => ctx.Source.StatusCode);
 
-            Field<ListGraphType<AuthorizedWareType>, List<AuthorizedUserWareModel>>()
+            Field<ListGraphType<WareType>, List<WareModel>>()
                .Name("Wares")
                .Resolve(ctx => ctx.Source.Wares);
 
             Field<ListGraphType<StringGraphType>, List<string>?>()
               .Name("Errors")
               .Resolve(ctx => ctx.Source.Errors);
-        }   
+        }
     }
 }

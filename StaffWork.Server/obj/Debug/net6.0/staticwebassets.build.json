@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+jPLdxa88DVyX/X//LIqIzPibACLmg749XyaTC3fjao=",
+  "Hash": "eOZLfra1Yk38zVawNPSGnI5Yvb4ki+tvsSce8m/u0aY=",
   "Source": "StaffWork.Server",
   "BasePath": "_content/StaffWork.Server",
   "Mode": "Default",
@@ -85,12 +85,12 @@
       "OriginalItemSpec": "wwwroot\\static\\css\\main.01f33f6f.css.map"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\static\\js\\main.f94f1569.js",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\static\\js\\main.edd1ef1e.js",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "static/js/main.f94f1569.js",
+      "RelativePath": "static/js/main.edd1ef1e.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -99,15 +99,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.f94f1569.js"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.edd1ef1e.js"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\static\\js\\main.f94f1569.js.LICENSE.txt",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\static\\js\\main.edd1ef1e.js.LICENSE.txt",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "static/js/main.f94f1569.js.LICENSE.txt",
+      "RelativePath": "static/js/main.edd1ef1e.js.LICENSE.txt",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -116,15 +116,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.f94f1569.js.LICENSE.txt"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.edd1ef1e.js.LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\static\\js\\main.f94f1569.js.map",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\static\\js\\main.edd1ef1e.js.map",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "static/js/main.f94f1569.js.map",
+      "RelativePath": "static/js/main.edd1ef1e.js.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -133,7 +133,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.f94f1569.js.map"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.edd1ef1e.js.map"
     }
   ]
 }

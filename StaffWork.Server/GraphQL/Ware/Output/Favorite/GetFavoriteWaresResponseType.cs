@@ -1,7 +1,7 @@
 ﻿using BusinessLogic.Models;
 using GraphQL.Types;
 
-namespace StaffWork.Server.GraphQL.Ware.Output
+namespace StaffWork.Server.GraphQL.Ware.Output.Favorite
 {
     public class GetFavoriteWaresResponseType : ObjectGraphType<GetFavoriteWaresResponse>
     {

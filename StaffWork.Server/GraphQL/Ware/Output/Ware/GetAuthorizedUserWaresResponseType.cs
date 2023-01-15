@@ -1,17 +1,17 @@
 ﻿using BusinessLogic.Models;
 using GraphQL.Types;
 
-namespace StaffWork.Server.GraphQL.Ware.Output
+namespace StaffWork.Server.GraphQL.Ware.Output.Ware
 {
-    public class GetWaresResponseType : ObjectGraphType<GetWaresResponse>
+    public class GetAuthorizedUserWaresResponseType : ObjectGraphType<GetAuthorizedUserWaresResponse>
     {
-        public GetWaresResponseType()
+        public GetAuthorizedUserWaresResponseType()
         {
             Field<NonNullGraphType<IntGraphType>, int>()
               .Name("StatusCode")
               .Resolve(ctx => ctx.Source.StatusCode);
 
-            Field<ListGraphType<WareType>, List<WareModel>>()
+            Field<ListGraphType<AuthorizedWareType>, List<AuthorizedUserWareModel>>()
                .Name("Wares")
                .Resolve(ctx => ctx.Source.Wares);
 

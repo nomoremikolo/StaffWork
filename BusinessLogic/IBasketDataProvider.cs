@@ -12,6 +12,7 @@ namespace BusinessLogic
         public BasketWareGraph AddToBasket(NewBasketWareModel newBasketWare);
         public BasketWareGraph ChangeBasketWareCount(NewBasketWareModel newBasketWare);
         public BasketWare RemoveWareFromBasket(int wareId, int userId);
+        public BasketWareGraph ClearBasket(int userId);
         public List<BasketWareGraph> GetAllWaresFromBasket(int userId);
         public BasketWareGraph GetWareFromBasketById(int id, int userId);
         public List<BasketWareGraph> ConfirmOrder(int userId);

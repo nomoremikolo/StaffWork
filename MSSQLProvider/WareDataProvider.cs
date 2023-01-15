@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace MSSQLProvider
@@ -27,9 +28,9 @@ namespace MSSQLProvider
 
                 var queryResult = connection.QueryFirstOrDefault(@"
                     insert into [dbo].[Ware] 
-                    (Name, BrandId, CategoryId, Description, Sizes, Price, OldPrice, IsDiscount, CountInStorage)
+                    (Name, BrandId, CategoryId, Description, Sizes, Price, OldPrice, IsDiscount, CountInStorage, Thumbnail, Images)
                     VALUES 
-                    (@Name, @BrandId, @CategoryId, @Description, @Sizes, @Price, @OldPrice, @IsDiscount, @CountInStorage)
+                    (@Name, @BrandId, @CategoryId, @Description, @Sizes, @Price, @OldPrice, @IsDiscount, @CountInStorage, @Thumbnail, @Images)
                     SELECT SCOPE_IDENTITY() AS [Id];
                     ", new
                 {
@@ -42,6 +43,8 @@ namespace MSSQLProvider
                     OldPrice = newWare.OldPrice,
                     IsDiscount = newWare.IsDiscount,
                     CountInStorage = newWare.CountInStorage,
+                    Thumbnail = newWare.Thumbnail,
+                    Images = newWare.Images,
                 });
                 var Id = (int)queryResult.Id;
                 var addedWare = GetWareById(Id);
@@ -105,8 +108,12 @@ namespace MSSQLProvider
                 {
                     @countOfRecords = settings.CountOfRecords,
                 }).ToList();
-                
- 
+
+                if (settings.KeyWords != null)
+                {
+                    var regex = new Regex(settings.KeyWords, RegexOptions.IgnoreCase);
+                    return resultList.FindAll(w => regex.Match(w.Name).Success);
+                }
                 
                 return resultList;
             }
@@ -189,7 +196,41 @@ namespace MSSQLProvider
 
         public WareModel UpdateWare(WareModel updatedWare)
         {
-            throw new NotImplementedException();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                connection.Query<WareModel>(
+                    @"update [Ware] set 
+                        Name = @Name
+                        BrandId = @BrandId
+                        CategoryId = @CategoryId
+                        Description = @Description
+                        Sizes = @Sizes
+                        Price = @Price
+                        OldPrice = @OldPrice
+                        IsDiscount = @IsDiscount
+                        CountInStorage = @CountInStorage
+                        Thumbnail = @Thumbnail
+                        Images = @Images
+                        where Id = @Id
+                    ", new
+                    {
+                        Id = updatedWare.Id,
+                        Name = updatedWare.Name,
+                        BrandId = updatedWare.BrandId,
+                        CategoryId = updatedWare.CategoryId,
+                        Description = updatedWare.Description,
+                        Sizes = updatedWare.Sizes,
+                        Price = updatedWare.Price,
+                        OldPrice = updatedWare.OldPrice,
+                        IsDiscount = updatedWare.IsDiscount,
+                        CountInStorage = updatedWare.CountInStorage,
+                        Thumbnail = updatedWare.Thumbnail,
+                        Images = updatedWare.Images,
+                    });
+
+                return GetWareById(updatedWare.Id);
+            }
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using BusinessLogic;
 using BusinessLogic.Models;
-using StaffWork.Server.GraphQL.Ware.Output;
+using StaffWork.Server.GraphQL.Ware.Output.Basket;
 using StaffWork.Server.JwtAuthorization;
 using StaffWork.Server.JwtAuthorization.Interfaces;
 using StaffWork.Server.Providers.Interfaces;
@@ -12,17 +12,11 @@ namespace StaffWork.Server.Providers
     public class BasketProvider : IBasketProvider
     {
         private readonly IBasketDataProvider basketDataProvider;
-        private readonly IJwtUtils jwtUtils;
-        private readonly IMapper mapper;
-        private readonly IHashHelper hashHelper;
         private IAuthorizationProvider authorizationProvider;
         private IHttpContextAccessor httpContextAccessor;
-        public BasketProvider(IBasketDataProvider basketDataProvider, IJwtUtils jwtUtils, IMapper mapper, IHashHelper hashHelper, IHttpContextAccessor httpContextAccessor, IAuthorizationProvider authorizationProvider)
+        public BasketProvider(IBasketDataProvider basketDataProvider, IHttpContextAccessor httpContextAccessor, IAuthorizationProvider authorizationProvider)
         {
             this.basketDataProvider = basketDataProvider;
-            this.jwtUtils = jwtUtils;
-            this.mapper = mapper;
-            this.hashHelper = hashHelper;
             this.authorizationProvider = authorizationProvider;
             this.httpContextAccessor = httpContextAccessor;
         }
@@ -75,6 +69,34 @@ namespace StaffWork.Server.Providers
             try
             {
                 response.Ware = basketDataProvider.ChangeBasketWareCount(newBasketWare);
+                response.StatusCode = 200;
+                return response;
+            }
+            catch (Exception)
+            {
+                response.Errors.Add("Db error");
+                response.StatusCode = 500;
+                return response;
+            }
+        }
+
+        public CRUDBasketResponse ClearBasket()
+        {
+            var response = new CRUDBasketResponse();
+            response.StatusCode = 400;
+
+            var authorizationResponse = authorizationProvider.AuthorizeUser(httpContextAccessor.HttpContext, AuthorizationPolicies.GetUsers);
+
+            if (authorizationResponse.StatusCode != 200)
+            {
+                response.StatusCode = authorizationResponse.StatusCode;
+                response.Errors = authorizationResponse.Errors;
+                return response;
+            }
+            
+            try
+            {
+                response.Ware = basketDataProvider.ClearBasket(authorizationResponse.User.Id);
                 response.StatusCode = 200;
                 return response;
             }

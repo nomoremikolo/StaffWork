@@ -18,5 +18,8 @@ namespace BusinessLogic.Models
         public decimal? OldPrice { get; set; }
         public bool IsDiscount { get; set; } = false;
         public int CountInStorage { get; set; }
+        public string? Thumbnail { get; set; }
+        public string? Images { get; set; }
+
     }
 }

@@ -19,6 +19,7 @@ namespace StaffWork.Server
             CreateMap<SignInQueryResponse, AuthenticationResponseModel>().ReverseMap();
             CreateMap<NewWareModel, CreateWareInput>().ReverseMap();
             CreateMap<NewBasketWareModel, CreateBasketWareInputType>().ReverseMap();
+            CreateMap<CreateBrandInput, NewBrandModel>().ReverseMap();
         }
     }
 }

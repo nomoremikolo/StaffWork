@@ -3,7 +3,11 @@ using BusinessLogic.Models;
 using GraphQL;
 using GraphQL.Types;
 using StaffWork.Server.GraphQL.Ware.Inputs;
-using StaffWork.Server.GraphQL.Ware.Output;
+using StaffWork.Server.GraphQL.Ware.Output.Basket;
+using StaffWork.Server.GraphQL.Ware.Output.Brands;
+using StaffWork.Server.GraphQL.Ware.Output.Category;
+using StaffWork.Server.GraphQL.Ware.Output.Favorite;
+using StaffWork.Server.GraphQL.Ware.Output.Ware;
 using StaffWork.Server.JwtAuthorization;
 using StaffWork.Server.JwtAuthorization.Interfaces;
 using StaffWork.Server.Providers.Interfaces;
@@ -12,7 +16,7 @@ namespace StaffWork.Server.GraphQL.Ware
 {
     public class WareQueries : ObjectGraphType
     {
-        public WareQueries(IMapper mapper,IBasketProvider basketProvider,  ICookiesHelper cookiesHelper, IAuthorizationProvider authorizationProvider,  IWareProvider wareProvider, IHttpContextAccessor httpContextAccessor)
+        public WareQueries(IMapper mapper,IBasketProvider basketProvider, IBrandProvider brandProvider, ICategoryProvider categoryProvider,  ICookiesHelper cookiesHelper, IAuthorizationProvider authorizationProvider,  IWareProvider wareProvider, IHttpContextAccessor httpContextAccessor)
         {
             Field<NonNullGraphType<GetWaresResponseType>, GetWaresResponse>()
                 .Name("GetAllWares")
@@ -40,6 +44,48 @@ namespace StaffWork.Server.GraphQL.Ware
                     return response;
                 }
                 );
+
+            Field<NonNullGraphType<GetCategoriesResponseType>, GetCategoriesResponse>()
+                .Name("GetAllCategories")
+                .Resolve(context =>
+                {
+                    var response = new GetCategoriesResponse();
+
+                    try
+                    {
+                        response = categoryProvider.GetAllCategories();
+                    }
+                    catch (Exception)
+                    {
+                        response.StatusCode = 500;
+                        response.Errors.Add($"Database error");
+                        return response;
+                    }
+                    response.StatusCode = 200;
+                    return response;
+                }
+                );
+            Field<NonNullGraphType<GetBrandsResponseType>, GetBrandsResponse>()
+                .Name("GetAllBrands")
+                .Resolve(context =>
+                {
+                    var response = new GetBrandsResponse();
+
+                    try
+                    {
+                        response = brandProvider.GetAllBrands();
+                    }
+                    catch (Exception)
+                    {
+                        response.StatusCode = 500;
+                        response.Errors.Add($"Database error");
+                        return response;
+                    }
+                    response.StatusCode = 200;
+                    return response;
+                }
+                );
+
             Field<NonNullGraphType<GetAuthorizedUserWaresResponseType>, GetAuthorizedUserWaresResponse>()
                  .Name("GetAllWaresAuthorized")
                  .Argument<QuerySettingsInputType>("settings", "Query settings")

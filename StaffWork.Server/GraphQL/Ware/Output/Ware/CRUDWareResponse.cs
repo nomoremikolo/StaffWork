@@ -1,14 +1,14 @@
 ﻿using BusinessLogic.Models;
 
-namespace StaffWork.Server.GraphQL.Ware.Output
+namespace StaffWork.Server.GraphQL.Ware.Output.Ware
 {
-    public class CRUDBasketResponse
+    public class CRUDWareResponse
     {
-        public BasketWareGraph? Ware { get; set; }
+        public WareModel? Ware { get; set; }
         public List<string> Errors { get; set; }
         public int StatusCode { get; set; }
 
-        public CRUDBasketResponse()
+        public CRUDWareResponse()
         {
             Errors = new List<string>();
         }
