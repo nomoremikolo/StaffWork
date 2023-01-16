@@ -67,7 +67,7 @@ namespace MSSQLProvider
                 connection.Open();
 
                 return connection.Query<FavoriteWareModel>(@"
-                    select WareId as Id, t2.Id as FavoriteId, Name, BrandId, CategoryId, Description, Sizes, Price, OldPrice, IsDiscount, CountInStorage, UserId from Ware t1 inner join Favorites t2 on t2.WareId = t1.Id and t2.UserId = @Id
+                    select WareId as Id, t2.Id as FavoriteId, Name, BrandId, CategoryId, Description, Sizes, Price, OldPrice, IsDiscount, CountInStorage, UserId, Thumbnail, Images from Ware t1 inner join Favorites t2 on t2.WareId = t1.Id and t2.UserId = @Id
                 ", new
                 {
                     @Id = userId,

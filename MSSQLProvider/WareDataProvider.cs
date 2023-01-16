@@ -153,7 +153,7 @@ namespace MSSQLProvider
                 var Category = settings.CategoryId != null ? " where CategoryId = " + settings.CategoryId : "";
                 resultList = connection.Query<AuthorizedUserWareModel>(
                 @$"
-                    select top (@countOfRecords) t2.IsFavorite, t1.Id, t1.Name, t1.BrandId, t1.CategoryId, t1.Description, t1.Sizes, t1.Price, t1.OldPrice, t1.IsDiscount, t1.CountInStorage from [Ware] t1 left join Favorites t2 on t1.Id = t2.WareId and t2.UserId = @UserId{Category}{filter} ORDER BY {cl}
+                    select top (@countOfRecords) t2.IsFavorite, t1.Id, t1.Name, t1.BrandId, t1.CategoryId, t1.Description, t1.Sizes, t1.Price, t1.OldPrice, t1.IsDiscount, t1.CountInStorage, t1.Thumbnail, t1.Images from [Ware] t1 left join Favorites t2 on t1.Id = t2.WareId and t2.UserId = @UserId{Category}{filter} ORDER BY {cl}
                     ", new
                 {
                     @countOfRecords = settings.CountOfRecords,
