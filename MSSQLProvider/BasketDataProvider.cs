@@ -165,7 +165,7 @@ namespace MSSQLProvider
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                return connection.Query<BasketWareGraph>(@"select t1.BasketId,t1.Count, t2.Id, t2.Name, t2.BrandId, t2.CategoryId, t2.Description, t2.Sizes, t2.Price, t2.OldPrice, t2.IsDiscount, t2.CountInStorage from [BasketWare] t1 inner join Ware t2 on t2.Id = t1.WareId and t1.BasketId = (select Id from Basket where UserId = @UserId)", new
+                return connection.Query<BasketWareGraph>(@"select t1.BasketId,t1.Count, t2.Id, t2.Name, t2.BrandId, t2.CategoryId, t2.Description, t2.Sizes, t2.Price, t2.OldPrice, t2.IsDiscount, t2.CountInStorage, t2.Thumbnail from [BasketWare] t1 inner join Ware t2 on t2.Id = t1.WareId and t1.BasketId = (select Id from Basket where UserId = @UserId)", new
                 {
                     UserId = userId,
                 }).ToList();

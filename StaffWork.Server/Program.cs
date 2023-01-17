@@ -9,6 +9,7 @@ builder.Services.AddDBProviders(configuration);
 builder.Services.AddGraphQLProviders();
 builder.Services.AddGraphQLAPI();
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddControllers();
 builder.Services.AddAutoMapper(typeof(MapperProfile));
 
 builder.Services.AddCors(options =>
@@ -36,6 +37,9 @@ app.UseCors("DefaultPolicy");
 app.UseRouting();
 app.UseGraphQLAltair();
 app.UseGraphQL<StaffScheme>();
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Images}/{action=Get}/{filename}");
 
 app.UseSpa(spa =>
 {

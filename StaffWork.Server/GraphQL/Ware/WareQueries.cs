@@ -113,12 +113,12 @@ namespace StaffWork.Server.GraphQL.Ware
                  }
                  );
 
-            Field<NonNullGraphType<CRUDWareResponseType>, CRUDWareResponse>()
+            Field<NonNullGraphType<GetWareByIdResponseType>, GetWareByIdResponse>()
                 .Name("GetWareById")
                 .Argument<IntGraphType>("WareId", "Ware id")
                 .Resolve(context =>
                 {
-                    var response = new CRUDWareResponse();
+                    var response = new GetWareByIdResponse();
                     var categoryId = context.GetArgument<int>("WareId");
                     try
                     {

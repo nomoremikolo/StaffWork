@@ -9,8 +9,9 @@ namespace StaffWork.Server.Providers.Interfaces
     {
         CRUDWareResponse CreateWare(NewWareModel ware);
         List<WareModel> GetAllWares(QuerySettings settings);
-        WareModel GetWareById(int id);
+        WareModelWithBrandAndCategory GetWareById(int id);
         GetAuthorizedUserWaresResponse GetAllWaresWithFavorite(QuerySettings settings);
+        CRUDWareResponse EditWare(WareModel wareModel);
         CRUDWareResponse DeleteWare(int id);
 
         CRUDWareResponse AddWareToFavorite(int wareId);

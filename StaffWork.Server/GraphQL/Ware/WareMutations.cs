@@ -50,6 +50,20 @@ namespace StaffWork.Server.GraphQL.Ware
                 }
                 );
 
+            Field<NonNullGraphType<CRUDWareResponseType>, CRUDWareResponse>()
+                .Name("UpdateWare")
+                .Argument<UpdateWareInputType>("ware", "Ware info")
+                .Resolve(context =>
+                {
+                    var response = new CRUDWareResponse();
+                    var wareInput = context.GetArgument<WareModel>("ware");
+
+                    response = wareProvider.EditWare(wareInput);
+
+                    return response;
+                }
+                );
+
             Field<NonNullGraphType<CRUDCategoryResponseType>, CRUDCategoryResponse>()
                 .Name("CreateCategory")
                 .Argument<StringGraphType>("CategoryName", "Category name")

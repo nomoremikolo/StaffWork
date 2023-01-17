@@ -9,6 +9,7 @@ using StaffWork.Server.JwtAuthorization.Interfaces;
 using StaffWork.Server.Providers.Interfaces;
 using StaffWork.Server.Utils.Intarfaces;
 using System.ComponentModel.DataAnnotations;
+using System.Text.RegularExpressions;
 
 namespace StaffWork.Server.Providers
 {
@@ -32,7 +33,7 @@ namespace StaffWork.Server.Providers
             this.authorizationProvider = authorizationProvider;
             this.httpContextAccessor = httpContextAccessor;
         }
-        public WareModel GetWareById(int id)
+        public WareModelWithBrandAndCategory GetWareById(int id)
         {
             return wareDataProvider.GetWareById(id);
         }
@@ -55,12 +56,38 @@ namespace StaffWork.Server.Providers
                 response.StatusCode = 401;
                 return response;
             }
+            
+            var imagesLinks = new List<string>();
+            foreach (var item in ware.Images.Split(" "))
+            {
+                try
+                {
+                    imagesLinks.Add(SaveFile(item));
+                }
+                catch (Exception)
+                {
+                    return null;
+                    throw;
+                }
+            }
+            ware.Thumbnail = SaveFile(ware.Thumbnail);
+            ware.Images = String.Join(" ", imagesLinks);
 
-            response.StatusCode = 201;
-
+            response.StatusCode = 200;
             response.Ware = wareDataProvider.CreateWare(ware);
 
             return response;
+        }
+        static string SaveFile(string base64Original)
+        {
+            string fileName = $"{DateTime.Now.Ticks / 100}_{DateTime.Now.Ticks}";
+            string workingDirectory = Environment.CurrentDirectory;
+            var regexRest = new Regex(@"data:image\/\S+;base64,");
+            var regexFileType = new Regex(@"data:image/(\w+);");
+            var base64Cuted = regexRest.Split(base64Original);
+            var fileType = regexFileType.Split(base64Original);
+            File.WriteAllBytes($"{workingDirectory}/wwwroot/images/{fileName}.{fileType[1]}", Convert.FromBase64String(base64Cuted[1]));
+            return $"{fileName}.{fileType[1]}";
         }
         static bool Validate<T>(T obj, out ICollection<ValidationResult> results)
         {
@@ -148,6 +175,32 @@ namespace StaffWork.Server.Providers
             }
             response.Ware = wareDataProvider.DeleteWare(id);
             return response;
+        }
+
+        public CRUDWareResponse EditWare(WareModel wareModel)
+        {
+            var response = new CRUDWareResponse();
+            var authorizationResponse = authorizationProvider.AuthorizeUser(httpContextAccessor.HttpContext, AuthorizationPolicies.Authorized);
+            if (authorizationResponse.StatusCode != 200)
+            {
+                response.StatusCode = authorizationResponse.StatusCode;
+                response.Errors = authorizationResponse.Errors;
+                return response;
+            }
+            try
+            {
+                response.Ware = wareDataProvider.UpdateWare(wareModel);
+                response.StatusCode = 200;
+                return response;
+            }
+            catch (Exception)
+            {
+                response.StatusCode = 500;
+                response.Errors.Add("Db error");
+                return response;
+                throw;
+            }
+           
         }
     }
 }

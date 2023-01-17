@@ -54,6 +54,10 @@ namespace StaffWork.Server.GraphQL.Ware.Output.Basket
             Field<NonNullGraphType<IntGraphType>, int>()
                 .Name("Count")
                 .Resolve(ctx => ctx.Source.Count);
+
+            Field<StringGraphType, string?>()
+               .Name("Thumbnail")
+               .Resolve(ctx => ctx.Source.Thumbnail);
         }
     }
 }
