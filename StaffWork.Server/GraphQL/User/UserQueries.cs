@@ -11,7 +11,7 @@ namespace StaffWork.Server.GraphQL.User
 {
     public class UserQueries : ObjectGraphType
     {
-        public UserQueries(IMapper mapper, IUserDataProvider userProvider, ICookiesHelper cookiesHelper, IHttpContextAccessor httpContextAccessor, IAuthorizationProvider authorizationProvider)
+        public UserQueries(IMapper mapper, IUserProvider userProvider, ICookiesHelper cookiesHelper, IHttpContextAccessor httpContextAccessor, IAuthorizationProvider authorizationProvider)
         {
 
             Field<NonNullGraphType<GetUsersResponseType>, GetUsersResponse>()
@@ -40,6 +40,21 @@ namespace StaffWork.Server.GraphQL.User
                         return response;
                     }
                     response.StatusCode = 200;
+                    return response;
+                }
+                );
+
+
+            Field<NonNullGraphType<CRUDUserResponseType>, CRUDUserResponse>()
+                .Name("GetUserById")
+                .Argument<IntGraphType>("UserId")
+                .Resolve(context =>
+                {
+                    var response = new CRUDUserResponse();
+
+                    var userId = context.GetArgument<int>("UserId");
+                    response = userProvider.GetUserById(userId);
+
                     return response;
                 }
                 );

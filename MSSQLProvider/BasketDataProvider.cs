@@ -48,15 +48,16 @@ namespace MSSQLProvider
                 {
                     connection.QueryFirstOrDefault<BasketWare>(@"
                     insert into [dbo].[BasketWare] 
-                    (WareId,BasketId,Count)
+                    (WareId,BasketId,Count,Size)
                     VALUES 
-                    (@WareId,@BasketId,@Count)
+                    (@WareId,@BasketId,@Count, @Size)
                     SELECT SCOPE_IDENTITY() AS [Id];
                     ", new
                     {
                         @WareId = newBasketWare.WareId,
                         @BasketId = newBasketWare.@BasketId,
                         @Count = newBasketWare.Count,
+                        @Size = newBasketWare.Size,
                     });
                     var addedWare = GetWareFromBasketById(newBasketWare.WareId, newBasketWare.UserId);
                     return addedWare;
@@ -129,15 +130,15 @@ namespace MSSQLProvider
                 var orderId = connection.QueryFirstOrDefault(@"insert into [Order] (UserId, Status, IsConfirmed) values (@UserId, @Status, @IsConfirmed) SELECT SCOPE_IDENTITY() AS [Id];", new
                 {
                     @UserId = userId,
-                    @Status = "Очікує підтвердження",
+                    @Status = "Waiting accept",
                     @IsConfirmed = false,
                 });
                 var wareList = new List<string>();
                 foreach (var item in wares)
                 {
-                    wareList.Add($"({item.Id}, {(int)orderId.Id}, {item.Count})");
+                    wareList.Add($"({item.Id}, {(int)orderId.Id}, {item.Count}, {item.Size})");
                 }
-                var AffectedRows = connection.Execute($@"insert into OrderWare (WareId,OrderId,Count) values 
+                var AffectedRows = connection.Execute($@"insert into OrderWare (WareId,OrderId,Count,Size) values 
                     {string.Join(",", wareList)}
                 ");
                 if (AffectedRows > 0)
@@ -165,10 +166,44 @@ namespace MSSQLProvider
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                return connection.Query<BasketWareGraph>(@"select t1.BasketId,t1.Count, t2.Id, t2.Name, t2.BrandId, t2.CategoryId, t2.Description, t2.Sizes, t2.Price, t2.OldPrice, t2.IsDiscount, t2.CountInStorage, t2.Thumbnail from [BasketWare] t1 inner join Ware t2 on t2.Id = t1.WareId and t1.BasketId = (select Id from Basket where UserId = @UserId)", new
+                var result = connection.Query<BasketWareGraph>(@"select t1.BasketId,t1.Count, t2.Id, t2.Name, t2.BrandId, t2.CategoryId, t2.Description, t2.Sizes,t1.Size, t2.Price, t2.OldPrice, t2.IsDiscount, t2.CountInStorage, t2.Thumbnail, t2.Images from [BasketWare] t1 inner join Ware t2 on t2.Id = t1.WareId and t1.BasketId = (select Id from Basket where UserId = @UserId)", new
                 {
                     UserId = userId,
                 }).ToList();
+                return result;
+            }
+        }
+
+        public OrderModel GetOrderById(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                return connection.QueryFirstOrDefault<OrderModel>(@"select * from [Order] where Id = @Id", new
+                {
+                    Id = id,
+                });
+            }
+        }
+
+        public List<OrderGraph> GetOrders(bool? confirmedFilter)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                var filter = confirmedFilter != null ? $@" where IsConfirmed = {(confirmedFilter == true ? $"1" : $"0")}" : "";
+                var orders = connection.Query<OrderGraph>($@"select * from [Order]{filter}").ToList();
+
+                for (int i = 0; i < orders.Count; i++)
+                {
+                    var result = connection.Query<OrderGraphModel>(@"select t1.Id as WareId, t1.Name as WareName, t4.Name as BrandName, t5.Name as CategoryName, t1.Description, t1.Sizes, t1.Price, t1.OldPrice, t1.IsDiscount, t1.CountInStorage, t2.OrderId, t2.Count, t2.Size from Ware t1 inner join OrderWare t2 on t2.WareId = t1.Id inner join Brand t4 on t1.BrandId = t4.Id inner join Category t5 on t1.CategoryId = t5.Id where t2.OrderId = @OrderId", new
+                    {
+                        @OrderId = orders[i].Id,
+                    }).ToList();
+                    orders[i].OrderWares.AddRange(result);
+                }
+                orders.Reverse();
+                return orders;
             }
         }
 
@@ -201,6 +236,23 @@ namespace MSSQLProvider
                         UserId = userId,
                     });
                 return null;
+            }
+        }
+
+        public OrderModel UpdateOrder(int id, string? status, bool? isConfirmed)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                var oldOrder = GetOrderById(id);
+                connection.Execute(@"update [Order] set Status = @Status, IsConfirmed = @IsConfirmed where Id = @Id",
+                    new
+                    {
+                        Id = id,
+                        Status = status != null ? status : oldOrder.Status,
+                        IsConfirmed = isConfirmed != null ? isConfirmed : oldOrder.IsConfirmed,
+                    });
+                return GetOrderById(id);
             }
         }
     }

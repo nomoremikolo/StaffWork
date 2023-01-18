@@ -2,6 +2,7 @@
 using BusinessLogic;
 using BusinessLogic.Models;
 using StaffWork.Server.GraphQL.User.Types;
+using StaffWork.Server.JwtAuthorization;
 using StaffWork.Server.JwtAuthorization.Interfaces;
 using StaffWork.Server.Providers.Interfaces;
 using StaffWork.Server.Utils.Intarfaces;
@@ -12,15 +13,19 @@ namespace StaffWork.Server.Providers
     public class UserProvider : IUserProvider
     {
         private IUserDataProvider userDBProvider;
+        private IAuthorizationProvider authorizationProvider;
+        private IHttpContextAccessor httpContextAccessor;
         private IJwtUtils jwtUtils;
         private IMapper mapper;
         private IHashHelper hashHelper;
-        public UserProvider(IUserDataProvider userDBProvider, IJwtUtils jwtUtils, IMapper mapper, IHashHelper hashHelper)
+        public UserProvider(IUserDataProvider userDBProvider, IHttpContextAccessor httpContextAccessor, IAuthorizationProvider authorizationProvider, IJwtUtils jwtUtils, IMapper mapper, IHashHelper hashHelper)
         {
             this.userDBProvider = userDBProvider;
             this.jwtUtils = jwtUtils;
             this.mapper = mapper;
             this.hashHelper = hashHelper;
+            this.authorizationProvider = authorizationProvider;
+            this.httpContextAccessor = httpContextAccessor;
         }
         public List<UserModel> GetUsers()
         {
@@ -66,6 +71,58 @@ namespace StaffWork.Server.Providers
             results = new List<ValidationResult>();
 
             return Validator.TryValidateObject(obj, new ValidationContext(obj), results, true);
+        }
+
+        public CRUDUserResponse UpdateUser(UserModel user)
+        {
+            var response = new CRUDUserResponse();
+
+            var authorizationResponse = authorizationProvider.AuthorizeUser(httpContextAccessor.HttpContext, AuthorizationPolicies.Authorized);
+            if (authorizationResponse.StatusCode != 200)
+            {
+                response.StatusCode = authorizationResponse.StatusCode;
+                response.Errors = authorizationResponse.Errors;
+                return response;
+            }
+            try
+            {
+                response.User = userDBProvider.UpdateUser(user);
+                response.StatusCode = 200;
+                return response;
+            }
+            catch (Exception)
+            {
+                response.Errors.Add("Db error");
+                response.StatusCode = 500;
+                return response;
+                throw;
+            }
+        }
+
+        public CRUDUserResponse GetUserById(int userId)
+        {
+            var response = new CRUDUserResponse();
+
+            var authorizationResponse = authorizationProvider.AuthorizeUser(httpContextAccessor.HttpContext, AuthorizationPolicies.Authorized);
+            if (authorizationResponse.StatusCode != 200)
+            {
+                response.StatusCode = authorizationResponse.StatusCode;
+                response.Errors = authorizationResponse.Errors;
+                return response;
+            }
+            try
+            {
+                response.User = userDBProvider.GetUserById(userId);
+                response.StatusCode = 200;
+                return response;
+            }
+            catch (Exception)
+            {
+                response.Errors.Add("Db error");
+                response.StatusCode = 500;
+                return response;
+                throw;
+            }
         }
     }
 }

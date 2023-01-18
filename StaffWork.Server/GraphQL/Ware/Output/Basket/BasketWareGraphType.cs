@@ -31,6 +31,10 @@ namespace StaffWork.Server.GraphQL.Ware.Output.Basket
                .Name("Sizes")
                .Resolve(ctx => ctx.Source.Sizes);
 
+            Field<NonNullGraphType<StringGraphType>, string?>()
+               .Name("Size")
+               .Resolve(ctx => ctx.Source.Size);
+
             Field<NonNullGraphType<DecimalGraphType>, decimal>()
                .Name("Price")
                .Resolve(ctx => ctx.Source.Price);

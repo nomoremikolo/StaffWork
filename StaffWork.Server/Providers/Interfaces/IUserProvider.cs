@@ -6,8 +6,9 @@ namespace StaffWork.Server.Providers.Interfaces
     public interface IUserProvider
     {
         List<UserModel> GetUsers();
+        CRUDUserResponse UpdateUser(UserModel user);
         //UserModel? GetUserByUsername(string username);
-        //CRUDUserResponse? GetUserById(int userId);
+        CRUDUserResponse GetUserById(int userId);
         //int GetCountOfUsers();
         //int GetCountOfUsersForSearch(string searchName);
         CRUDUserResponse CreateUser(NewUserModel user);

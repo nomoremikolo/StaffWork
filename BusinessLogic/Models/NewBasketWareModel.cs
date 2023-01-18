@@ -12,5 +12,6 @@ namespace BusinessLogic.Models
         public int UserId { get; set; } = 0;
         public int BasketId { get; set; }
         public int Count { get; set; }
+        public string Size { get; set; } = "null";
     }
 }

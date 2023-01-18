@@ -167,6 +167,7 @@ namespace MSSQLProvider
 
         public UserModel? UpdateUser(UserModel user)
         {
+            var oldUser = GetUserById(user.Id);
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -189,18 +190,18 @@ namespace MSSQLProvider
                     new
                     {
                         Id = user.Id,
-                        Username = user.Username,
-                        PasswordHash = user.PasswordHash,
-                        PasswordSalt = user.PasswordSalt,
-                        RefreshToken = user.RefreshToken,
-                        Name = user.Name,
-                        Surname = user.Surname,
-                        IsActivated = user.IsActivated,
-                        Age = user.Age,
-                        Adress = user.Adress,
-                        Email = user.Email,
-                        Role = user.Role,
-                        Permissions = user.Permissions ?? "",
+                        Username = user.Username != null ? user.Username : oldUser.Username,
+                        PasswordHash = user.PasswordHash != null ? user.PasswordHash : oldUser.PasswordHash,
+                        PasswordSalt = user.PasswordSalt != null ? user.PasswordSalt : oldUser.PasswordSalt,
+                        RefreshToken = user.RefreshToken != null ? user.RefreshToken : oldUser.RefreshToken,
+                        Name = user.Name != null ? user.Name : oldUser.Name,
+                        Surname = user.Surname != null ? user.Surname : oldUser.Surname,
+                        IsActivated = user.IsActivated != null ? user.IsActivated : oldUser.IsActivated,
+                        Age = user.Age != null ? user.Age : oldUser.Age,
+                        Adress = user.Adress != null ? user.Adress : oldUser.Adress,
+                        Email = user.Email != null ? user.Email : oldUser.Email,
+                        Role = user.Role != null ? user.Role : oldUser.Role,
+                        Permissions = user.Permissions != null ? user.Permissions : oldUser.Permissions,
                     });
                 if (affectedRows > 0)
                 {

@@ -2,6 +2,7 @@
 using BusinessLogic;
 using BusinessLogic.Models;
 using StaffWork.Server.GraphQL.Ware.Output.Basket;
+using StaffWork.Server.GraphQL.Ware.Output.Ware;
 using StaffWork.Server.JwtAuthorization;
 using StaffWork.Server.JwtAuthorization.Interfaces;
 using StaffWork.Server.Providers.Interfaces;
@@ -50,7 +51,35 @@ namespace StaffWork.Server.Providers
             }
             
         }
+        public CRUDOrderResponse UpdateOrder(int id, string? status, bool? isConfirmed)
+        {
+            var response = new CRUDOrderResponse();
+            response.StatusCode = 400;
 
+            var authorizationResponse = authorizationProvider.AuthorizeUser(httpContextAccessor.HttpContext, AuthorizationPolicies.GetUsers);
+
+            if (authorizationResponse.StatusCode != 200)
+            {
+                response.StatusCode = authorizationResponse.StatusCode;
+                response.Errors = authorizationResponse.Errors;
+                return response;
+            }
+
+            try
+            {
+                response.Order = basketDataProvider.UpdateOrder(id, status, isConfirmed);
+                response.StatusCode = 200;
+                return response;
+            }
+            catch (Exception)
+            {
+                response.Errors.Add("Db error");
+                response.StatusCode = 500;
+                return response;
+            }
+            //return basketDataProvider.UpdateOrder(id, status, isConfirmed);
+
+        }
         public CRUDBasketResponse ChangeBasketWareCount(NewBasketWareModel newBasketWare)
         {
             var response = new CRUDBasketResponse();
@@ -189,6 +218,11 @@ namespace StaffWork.Server.Providers
                 response.StatusCode = 500;
                 return response;
             }
+        }
+
+        public List<OrderGraph> GetOrders(bool? confirmedFilter)
+        {
+            return basketDataProvider.GetOrders(confirmedFilter);
         }
 
         public CRUDBasketResponse RemoveFromBasket(int basketWareId)

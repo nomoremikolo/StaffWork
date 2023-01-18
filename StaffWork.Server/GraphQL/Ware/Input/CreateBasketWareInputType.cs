@@ -13,6 +13,10 @@ namespace StaffWork.Server.GraphQL.Ware.Input
             Field<NonNullGraphType<IntGraphType>, int>()
                 .Name("Count")
                 .Resolve(ctx => ctx.Source.Count);
+
+            Field<NonNullGraphType<StringGraphType>, string>()
+                .Name("Size")
+                .Resolve(ctx => ctx.Source.Size);
         }
     }
 }

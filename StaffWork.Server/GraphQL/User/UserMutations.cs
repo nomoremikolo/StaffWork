@@ -2,6 +2,7 @@
 using BusinessLogic.Models;
 using GraphQL;
 using GraphQL.Types;
+using StaffWork.Server.GraphQL.User.Input;
 using StaffWork.Server.GraphQL.User.Inputs;
 using StaffWork.Server.GraphQL.User.Types;
 using StaffWork.Server.JwtAuthorization;
@@ -67,7 +68,46 @@ namespace StaffWork.Server.GraphQL.User
                     return response;
                 }
                 );
+            Field<NonNullGraphType<CRUDUserResponseType>, CRUDUserResponse>()
+                .Name("UpdateUser")
+                .Argument<UpdateUserByAdminInputType>("user", "User")
+                .Resolve(context =>
+                {
+                    var response = new CRUDUserResponse();
 
+                    var userInput = context.GetArgument<UpdateUserByAdminInput>("user");
+                    //var createUserModel = mapper.Map<NewUserModel>(userInput);
+
+                    try
+                    {
+                        response = userProvider.UpdateUser(new UserModel
+                        {
+                            Id = userInput.Id,
+                            Adress = userInput.Adress,
+                            Age = userInput.Age,
+                            Email = userInput.Email,
+                            IsActivated = userInput.IsActivated,
+                            Name = userInput.Name,
+                            Permissions = userInput.Permissions,
+                            Role = userInput.Role,
+                            Surname = userInput.Surname,
+                            Username = userInput.Username,
+                        });
+                        if (response.StatusCode == 409)
+                        {
+                            return response;
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        response.StatusCode = 500;
+                        response.Errors.Add($"Database error");
+                        return response;
+                    }
+                    
+                    return response;
+                }
+                );
         }
     }
 }

@@ -176,7 +176,7 @@ namespace MSSQLProvider
             {
                 connection.Open();
                 var result = connection.QueryFirstOrDefault<WareModelWithBrandAndCategory>(
-                    @"select t1.Id, t1.Name, t1.BrandId, t1.CategoryId, t1.Description, t1.Sizes, t1.Price, t1.OldPrice, t1.IsDiscount, t1.CountInStorage, t1.Thumbnail, t1.Images, t2.Name as BrandName, t3.Name as CategoryName, t2.Phone, t2.CountryManufactured from [Ware] t1 inner join [Brand] t2 on t1.BrandId = t2.Id inner join [Category] t3 on t1.CategoryId = t3.Id 
+                    @"select t1.Id, t1.Name, t1.BrandId, t1.CategoryId, t1.Description, t1.Sizes, t1.Price, t1.OldPrice, t1.IsDiscount, t1.CountInStorage, t1.Thumbnail, t1.Images, t2.Name as BrandName, t3.Name as CategoryName, t2.Phone, t2.CountryManufactured from [Ware] t1 inner join [Brand] t2 on t1.BrandId = t2.Id inner join [Category] t3 on t1.CategoryId = t3.Id where t1.Id = @Id
                     ", new
                     {
                         Id = wareId

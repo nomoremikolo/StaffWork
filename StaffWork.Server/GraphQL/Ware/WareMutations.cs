@@ -247,6 +247,7 @@ namespace StaffWork.Server.GraphQL.Ware
                   {
                       WareId = newBasket.WareId,
                       Count = newBasket.Count,
+                      Size = newBasket.Size,
                   });
                   return response;
               }
@@ -279,6 +280,25 @@ namespace StaffWork.Server.GraphQL.Ware
                   return response;
               }
               );
+
+            Field<NonNullGraphType<CRUDOrderResponseType>, CRUDOrderResponse>()
+              .Name("UpdateOrder")
+              .Argument<IntGraphType>("Id", "Order id")
+              .Argument<StringGraphType>("Status", "Order status")
+              .Argument<BooleanGraphType>("IsConfirmed", "Order IsConfirmed")
+              .Resolve(context =>
+              {
+                  var response = new CRUDOrderResponse();
+
+                  var Id = context.GetArgument<int>("Id");
+                  var Status = context.GetArgument<string>("Status");
+                  var IsConfirmed = context.GetArgument<bool>("IsConfirmed");
+
+                  response = basketProvider.UpdateOrder(Id, Status, IsConfirmed);
+                  return response;
+              }
+              );
+
 
             Field<NonNullGraphType<CRUDBasketResponseType>, CRUDBasketResponse>()
               .Name("RemoveWareFromBasket")

@@ -45,6 +45,29 @@ namespace StaffWork.Server.GraphQL.Ware
                 }
                 );
 
+            Field<NonNullGraphType<GetOrdersResponseType>, GetOrdersResponse>()
+                .Name("GetOrders")
+                .Argument<BooleanGraphType>("confirmed")
+                .Resolve(context =>
+                {
+                    var response = new GetOrdersResponse();
+
+                    try
+                    {
+                        var confirmed = context.GetArgument<bool?>("confirmed");
+                        response.Wares = basketProvider.GetOrders(confirmed);
+                    }
+                    catch (Exception)
+                    {
+                        response.StatusCode = 500;
+                        response.Errors.Add($"Database error");
+                        return response;
+                    }
+                    response.StatusCode = 200;
+                    return response;
+                }
+                );
+
             Field<NonNullGraphType<GetCategoriesResponseType>, GetCategoriesResponse>()
                 .Name("GetAllCategories")
                 .Resolve(context =>
