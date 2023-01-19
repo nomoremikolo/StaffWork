@@ -76,7 +76,6 @@ namespace StaffWork.Server.GraphQL.User
                     var response = new CRUDUserResponse();
 
                     var userInput = context.GetArgument<UpdateUserByAdminInput>("user");
-                    //var createUserModel = mapper.Map<NewUserModel>(userInput);
 
                     try
                     {
@@ -105,6 +104,49 @@ namespace StaffWork.Server.GraphQL.User
                         return response;
                     }
                     
+                    return response;
+                }
+                );
+
+            Field<NonNullGraphType<CRUDUserResponseType>, CRUDUserResponse>()
+                .Name("UpdateSelfInfo")
+                .Argument<UpdateBySelfInputType>("user", "User")
+                .Resolve(context =>
+                {
+                    var response = new CRUDUserResponse();
+
+                    var userInput = context.GetArgument<UpdateBySelfInput>("user");
+                    var authorizationResponse = authorizationProvider.AuthorizeUser(httpContextAccessor.HttpContext, AuthorizationPolicies.Authorized);
+                    if (authorizationResponse.StatusCode != 200)
+                    {
+                        response.StatusCode = authorizationResponse.StatusCode;
+                        response.Errors = authorizationResponse.Errors;
+                        return response;
+                    }
+                    try
+                    {
+                        response = userProvider.UpdateUser(new UserModel
+                        {
+                            Id = authorizationResponse.User.Id,
+                            Adress = userInput.Adress,
+                            Age = userInput.Age,
+                            Email = userInput.Email,
+                            Name = userInput.Name,
+                            Surname = userInput.Surname,
+                            Username = userInput.Username,
+                        });
+                        if (response.StatusCode == 409)
+                        {
+                            return response;
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        response.StatusCode = 500;
+                        response.Errors.Add($"Database error");
+                        return response;
+                    }
+
                     return response;
                 }
                 );

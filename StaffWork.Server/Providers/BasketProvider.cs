@@ -220,9 +220,9 @@ namespace StaffWork.Server.Providers
             }
         }
 
-        public List<OrderGraph> GetOrders(bool? confirmedFilter)
+        public List<OrderGraph> GetOrders(bool? confirmedFilter, string? orderNumber)
         {
-            return basketDataProvider.GetOrders(confirmedFilter);
+            return basketDataProvider.GetOrders(confirmedFilter, orderNumber);
         }
 
         public CRUDBasketResponse RemoveFromBasket(int basketWareId)

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yUBvdHI5fnqBJ2MnaGXHyhv+a7Eke1FUEg7n/7h4xd4=",
+  "Hash": "g2i64zu4RElgR21HKkUmek55wGE2XbmH2/j1MtyHIGk=",
   "Source": "StaffWork.Server",
   "BasePath": "_content/StaffWork.Server",
   "Mode": "Default",
@@ -34,12 +34,12 @@
       "OriginalItemSpec": "wwwroot\\asset-manifest.json"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\Images\\6380954525434864_638095452543486654.jpeg",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969602732517_638096960273251963.jpeg",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "Images/6380954525434864_638095452543486654.jpeg",
+      "RelativePath": "images/6380969602732517_638096960273251963.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -48,15 +48,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\6380954525434864_638095452543486654.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\6380969602732517_638096960273251963.jpeg"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\Images\\6380954525438051_638095452543805238.jpeg",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969602735021_638096960273502322.jpeg",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "Images/6380954525438051_638095452543805238.jpeg",
+      "RelativePath": "images/6380969602735021_638096960273502322.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -65,15 +65,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\6380954525438051_638095452543805238.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\6380969602735021_638096960273502322.jpeg"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\Images\\6380954525438969_638095452543897115.jpeg",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969602735836_638096960273583785.jpeg",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "Images/6380954525438969_638095452543897115.jpeg",
+      "RelativePath": "images/6380969602735836_638096960273583785.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -82,15 +82,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\6380954525438969_638095452543897115.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\6380969602735836_638096960273583785.jpeg"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\Images\\6380954525439994_638095452543999603.jpeg",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969602737552_638096960273755380.jpeg",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "Images/6380954525439994_638095452543999603.jpeg",
+      "RelativePath": "images/6380969602737552_638096960273755380.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -99,15 +99,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\6380954525439994_638095452543999603.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\6380969602737552_638096960273755380.jpeg"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\Images\\6380954525440919_638095452544092135.jpeg",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969602738368_638096960273836982.jpeg",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "Images/6380954525440919_638095452544092135.jpeg",
+      "RelativePath": "images/6380969602738368_638096960273836982.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -116,15 +116,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\6380954525440919_638095452544092135.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\6380969602738368_638096960273836982.jpeg"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\Images\\6380954525442222_638095452544222465.jpeg",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969602739391_638096960273939249.jpeg",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "Images/6380954525442222_638095452544222465.jpeg",
+      "RelativePath": "images/6380969602739391_638096960273939249.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -133,15 +133,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\6380954525442222_638095452544222465.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\6380969602739391_638096960273939249.jpeg"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\Images\\6380954525443429_638095452544343122.jpeg",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969602740983_638096960274098436.jpeg",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "Images/6380954525443429_638095452544343122.jpeg",
+      "RelativePath": "images/6380969602740983_638096960274098436.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -150,15 +150,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\6380954525443429_638095452544343122.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\6380969602740983_638096960274098436.jpeg"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\Images\\6380954525445174_638095452544517629.jpeg",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969609381034_638096960938103842.jpeg",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "Images/6380954525445174_638095452544517629.jpeg",
+      "RelativePath": "images/6380969609381034_638096960938103842.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -167,15 +167,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\6380954525445174_638095452544517629.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\6380969609381034_638096960938103842.jpeg"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\Images\\6380954536945118_638095453694512027.jpeg",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969609382565_638096960938256651.jpeg",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "Images/6380954536945118_638095453694512027.jpeg",
+      "RelativePath": "images/6380969609382565_638096960938256651.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -184,15 +184,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\6380954536945118_638095453694512027.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\6380969609382565_638096960938256651.jpeg"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\Images\\6380954536945661_638095453694566249.jpeg",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969609383235_638096960938323689.jpeg",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "Images/6380954536945661_638095453694566249.jpeg",
+      "RelativePath": "images/6380969609383235_638096960938323689.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -201,15 +201,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\6380954536945661_638095453694566249.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\6380969609383235_638096960938323689.jpeg"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\Images\\6380954536946402_638095453694640372.jpeg",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969609384137_638096960938413868.jpeg",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "Images/6380954536946402_638095453694640372.jpeg",
+      "RelativePath": "images/6380969609384137_638096960938413868.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -218,15 +218,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\6380954536946402_638095453694640372.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\6380969609384137_638096960938413868.jpeg"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\Images\\6380954536947227_638095453694722867.jpeg",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969609384997_638096960938499885.jpeg",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "Images/6380954536947227_638095453694722867.jpeg",
+      "RelativePath": "images/6380969609384997_638096960938499885.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -235,15 +235,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\6380954536947227_638095453694722867.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\6380969609384997_638096960938499885.jpeg"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\Images\\6380954536948046_638095453694804757.jpeg",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969609385868_638096960938586959.jpeg",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "Images/6380954536948046_638095453694804757.jpeg",
+      "RelativePath": "images/6380969609385868_638096960938586959.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -252,15 +252,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\6380954536948046_638095453694804757.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\6380969609385868_638096960938586959.jpeg"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\Images\\6380954536948732_638095453694873294.jpeg",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969609386755_638096960938675639.jpeg",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "Images/6380954536948732_638095453694873294.jpeg",
+      "RelativePath": "images/6380969609386755_638096960938675639.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -269,15 +269,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\6380954536948732_638095453694873294.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\6380969609386755_638096960938675639.jpeg"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\Images\\6380954536949639_638095453694964058.jpeg",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969609387792_638096960938779436.jpeg",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "Images/6380954536949639_638095453694964058.jpeg",
+      "RelativePath": "images/6380969609387792_638096960938779436.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -286,15 +286,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\6380954536949639_638095453694964058.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\6380969609387792_638096960938779436.jpeg"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\Images\\6380954542511647_638095454251164866.jpeg",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969609388768_638096960938877568.jpeg",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "Images/6380954542511647_638095454251164866.jpeg",
+      "RelativePath": "images/6380969609388768_638096960938877568.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -303,15 +303,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\6380954542511647_638095454251164866.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\6380969609388768_638096960938877568.jpeg"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\Images\\6380954542512303_638095454251230464.jpeg",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969610960596_638096961096059800.jpeg",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "Images/6380954542512303_638095454251230464.jpeg",
+      "RelativePath": "images/6380969610960596_638096961096059800.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -320,15 +320,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\6380954542512303_638095454251230464.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\6380969610960596_638096961096059800.jpeg"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\Images\\6380954542512959_638095454251296103.jpeg",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969610961737_638096961096173874.jpeg",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "Images/6380954542512959_638095454251296103.jpeg",
+      "RelativePath": "images/6380969610961737_638096961096173874.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -337,15 +337,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\6380954542512959_638095454251296103.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\6380969610961737_638096961096173874.jpeg"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\Images\\6380954542513736_638095454251373857.jpeg",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969610962604_638096961096260559.jpeg",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "Images/6380954542513736_638095454251373857.jpeg",
+      "RelativePath": "images/6380969610962604_638096961096260559.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -354,15 +354,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\6380954542513736_638095454251373857.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\6380969610962604_638096961096260559.jpeg"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\Images\\6380954542514585_638095454251458675.jpeg",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969610963090_638096961096309158.jpeg",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "Images/6380954542514585_638095454251458675.jpeg",
+      "RelativePath": "images/6380969610963090_638096961096309158.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -371,15 +371,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\6380954542514585_638095454251458675.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\6380969610963090_638096961096309158.jpeg"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\Images\\6380954542515508_638095454251550938.jpeg",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969610963934_638096961096393502.jpeg",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "Images/6380954542515508_638095454251550938.jpeg",
+      "RelativePath": "images/6380969610963934_638096961096393502.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -388,15 +388,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\6380954542515508_638095454251550938.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\6380969610963934_638096961096393502.jpeg"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\Images\\6380954542516455_638095454251645690.jpeg",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969610964635_638096961096463674.jpeg",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "Images/6380954542516455_638095454251645690.jpeg",
+      "RelativePath": "images/6380969610964635_638096961096463674.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -405,15 +405,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\6380954542516455_638095454251645690.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\6380969610964635_638096961096463674.jpeg"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\Images\\6380954542518129_638095454251813004.jpeg",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969610965716_638096961096571773.jpeg",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "Images/6380954542518129_638095454251813004.jpeg",
+      "RelativePath": "images/6380969610965716_638096961096571773.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -422,15 +422,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\6380954542518129_638095454251813004.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\6380969610965716_638096961096571773.jpeg"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\Images\\6380960290054682_638096029005468459.jpeg",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969612455589_638096961245559050.jpeg",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "Images/6380960290054682_638096029005468459.jpeg",
+      "RelativePath": "images/6380969612455589_638096961245559050.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -439,15 +439,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\6380960290054682_638096029005468459.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\6380969612455589_638096961245559050.jpeg"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\Images\\6380960290055406_638096029005540771.jpeg",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969612457205_638096961245720806.jpeg",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "Images/6380960290055406_638096029005540771.jpeg",
+      "RelativePath": "images/6380969612457205_638096961245720806.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -456,15 +456,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\6380960290055406_638096029005540771.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\6380969612457205_638096961245720806.jpeg"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\Images\\6380960290055970_638096029005597220.jpeg",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969612457819_638096961245781981.jpeg",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "Images/6380960290055970_638096029005597220.jpeg",
+      "RelativePath": "images/6380969612457819_638096961245781981.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -473,15 +473,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\6380960290055970_638096029005597220.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\6380969612457819_638096961245781981.jpeg"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\Images\\6380960290056554_638096029005656377.jpeg",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969612458374_638096961245837495.jpeg",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "Images/6380960290056554_638096029005656377.jpeg",
+      "RelativePath": "images/6380969612458374_638096961245837495.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -490,15 +490,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\6380960290056554_638096029005656377.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\6380969612458374_638096961245837495.jpeg"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\Images\\6380960290057911_638096029005791272.jpeg",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969612459007_638096961245900784.jpeg",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "Images/6380960290057911_638096029005791272.jpeg",
+      "RelativePath": "images/6380969612459007_638096961245900784.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -507,15 +507,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\6380960290057911_638096029005791272.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\6380969612459007_638096961245900784.jpeg"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\Images\\6380960290059080_638096029005908252.jpeg",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969612460788_638096961246079011.jpeg",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "Images/6380960290059080_638096029005908252.jpeg",
+      "RelativePath": "images/6380969612460788_638096961246079011.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -524,15 +524,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\6380960290059080_638096029005908252.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\6380969612460788_638096961246079011.jpeg"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\Images\\6380960290060412_638096029006041352.jpeg",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969612462143_638096961246214453.jpeg",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "Images/6380960290060412_638096029006041352.jpeg",
+      "RelativePath": "images/6380969612462143_638096961246214453.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -541,7 +541,143 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\6380960290060412_638096029006041352.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\6380969612462143_638096961246214453.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380969612462906_638096961246290715.jpeg",
+      "SourceId": "StaffWork.Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
+      "BasePath": "_content/StaffWork.Server",
+      "RelativePath": "images/6380969612462906_638096961246290715.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\6380969612462906_638096961246290715.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380975702946273_638097570294646097.jpeg",
+      "SourceId": "StaffWork.Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
+      "BasePath": "_content/StaffWork.Server",
+      "RelativePath": "images/6380975702946273_638097570294646097.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\6380975702946273_638097570294646097.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380975702950701_638097570295070216.jpeg",
+      "SourceId": "StaffWork.Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
+      "BasePath": "_content/StaffWork.Server",
+      "RelativePath": "images/6380975702950701_638097570295070216.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\6380975702950701_638097570295070216.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380975702951520_638097570295152174.jpeg",
+      "SourceId": "StaffWork.Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
+      "BasePath": "_content/StaffWork.Server",
+      "RelativePath": "images/6380975702951520_638097570295152174.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\6380975702951520_638097570295152174.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380975702952236_638097570295223791.jpeg",
+      "SourceId": "StaffWork.Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
+      "BasePath": "_content/StaffWork.Server",
+      "RelativePath": "images/6380975702952236_638097570295223791.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\6380975702952236_638097570295223791.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380975702952923_638097570295292441.jpeg",
+      "SourceId": "StaffWork.Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
+      "BasePath": "_content/StaffWork.Server",
+      "RelativePath": "images/6380975702952923_638097570295292441.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\6380975702952923_638097570295292441.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380975702953877_638097570295387829.jpeg",
+      "SourceId": "StaffWork.Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
+      "BasePath": "_content/StaffWork.Server",
+      "RelativePath": "images/6380975702953877_638097570295387829.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\6380975702953877_638097570295387829.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\images\\6380975702954886_638097570295488708.jpeg",
+      "SourceId": "StaffWork.Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
+      "BasePath": "_content/StaffWork.Server",
+      "RelativePath": "images/6380975702954886_638097570295488708.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\6380975702954886_638097570295488708.jpeg"
     },
     {
       "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\index.html",
@@ -561,12 +697,12 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\static\\css\\main.d13d32e0.css",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\static\\css\\main.d3da7c64.css",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "static/css/main.d13d32e0.css",
+      "RelativePath": "static/css/main.d3da7c64.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -575,15 +711,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\css\\main.d13d32e0.css"
+      "OriginalItemSpec": "wwwroot\\static\\css\\main.d3da7c64.css"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\static\\css\\main.d13d32e0.css.map",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\static\\css\\main.d3da7c64.css.map",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "static/css/main.d13d32e0.css.map",
+      "RelativePath": "static/css/main.d3da7c64.css.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -592,15 +728,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\css\\main.d13d32e0.css.map"
+      "OriginalItemSpec": "wwwroot\\static\\css\\main.d3da7c64.css.map"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\static\\js\\main.d92e66f9.js",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\static\\js\\main.d0c3cb33.js",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "static/js/main.d92e66f9.js",
+      "RelativePath": "static/js/main.d0c3cb33.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -609,15 +745,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.d92e66f9.js"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.d0c3cb33.js"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\static\\js\\main.d92e66f9.js.LICENSE.txt",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\static\\js\\main.d0c3cb33.js.LICENSE.txt",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "static/js/main.d92e66f9.js.LICENSE.txt",
+      "RelativePath": "static/js/main.d0c3cb33.js.LICENSE.txt",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -626,15 +762,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.d92e66f9.js.LICENSE.txt"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.d0c3cb33.js.LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\static\\js\\main.d92e66f9.js.map",
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\static\\js\\main.d0c3cb33.js.map",
       "SourceId": "StaffWork.Server",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
       "BasePath": "_content/StaffWork.Server",
-      "RelativePath": "static/js/main.d92e66f9.js.map",
+      "RelativePath": "static/js/main.d0c3cb33.js.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -643,7 +779,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.d92e66f9.js.map"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.d0c3cb33.js.map"
+    },
+    {
+      "Identity": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\t-shirt.ico",
+      "SourceId": "StaffWork.Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dro1l\\source\\repos\\StaffWork\\StaffWork.Server\\wwwroot\\",
+      "BasePath": "_content/StaffWork.Server",
+      "RelativePath": "t-shirt.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\t-shirt.ico"
     }
   ]
 }

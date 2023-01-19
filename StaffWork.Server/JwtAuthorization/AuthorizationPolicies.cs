@@ -19,6 +19,16 @@ namespace StaffWork.Server.JwtAuthorization
             }
             return null;
         }
+        public static UserModel? WareCRUD(UserModel user)
+        {
+            var permissionKey = ((int)PermissionsEnum.WareCRUD).ToString();
+
+            if (user.Permissions.Split(" ").Contains(permissionKey))
+            {
+                return user;
+            }
+            return null;
+        }
         public static UserModel? UsersCRUD(UserModel user)
         {
             var permissionKey = ((int)PermissionsEnum.UsersCRUD).ToString();

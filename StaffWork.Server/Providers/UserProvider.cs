@@ -27,9 +27,9 @@ namespace StaffWork.Server.Providers
             this.authorizationProvider = authorizationProvider;
             this.httpContextAccessor = httpContextAccessor;
         }
-        public List<UserModel> GetUsers()
+        public List<UserModel> GetUsers(string? keyWords)
         {
-            return userDBProvider.GetUsers();
+            return userDBProvider.GetUsers(keyWords);
         }
 
         public CRUDUserResponse CreateUser(NewUserModel user)

@@ -186,13 +186,14 @@ namespace MSSQLProvider
             }
         }
 
-        public List<OrderGraph> GetOrders(bool? confirmedFilter)
+        public List<OrderGraph> GetOrders(bool? confirmedFilter, string? orderNumber)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 var filter = confirmedFilter != null ? $@" where IsConfirmed = {(confirmedFilter == true ? $"1" : $"0")}" : "";
-                var orders = connection.Query<OrderGraph>($@"select * from [Order]{filter}").ToList();
+                var numberFilter = orderNumber != null ? confirmedFilter != null ? $@" and Id like N'%{orderNumber}%'" : $" where Id like N'%{orderNumber}%'" : "";
+                var orders = connection.Query<OrderGraph>($@"select * from [Order]{filter}{numberFilter}").ToList();
 
                 for (int i = 0; i < orders.Count; i++)
                 {

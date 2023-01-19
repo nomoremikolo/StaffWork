@@ -5,7 +5,7 @@ namespace StaffWork.Server.Providers.Interfaces
 {
     public interface IUserProvider
     {
-        List<UserModel> GetUsers();
+        List<UserModel> GetUsers(string? keyWords);
         CRUDUserResponse UpdateUser(UserModel user);
         //UserModel? GetUserByUsername(string username);
         CRUDUserResponse GetUserById(int userId);

@@ -19,6 +19,6 @@ namespace BusinessLogic
         public List<BasketWareGraph> GetAllWaresFromBasket(int userId);
         public BasketWareGraph GetWareFromBasketById(int id, int userId);
         public List<BasketWareGraph> ConfirmOrder(int userId);
-        public List<OrderGraph> GetOrders(bool? confirmedFilter);
+        public List<OrderGraph> GetOrders(bool? confirmedFilter, string? orderNumber);
     }
 }

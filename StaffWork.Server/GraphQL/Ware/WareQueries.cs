@@ -48,6 +48,7 @@ namespace StaffWork.Server.GraphQL.Ware
             Field<NonNullGraphType<GetOrdersResponseType>, GetOrdersResponse>()
                 .Name("GetOrders")
                 .Argument<BooleanGraphType>("confirmed")
+                .Argument<StringGraphType>("OrderNumber")
                 .Resolve(context =>
                 {
                     var response = new GetOrdersResponse();
@@ -55,7 +56,8 @@ namespace StaffWork.Server.GraphQL.Ware
                     try
                     {
                         var confirmed = context.GetArgument<bool?>("confirmed");
-                        response.Wares = basketProvider.GetOrders(confirmed);
+                        var OrderNumber = context.GetArgument<string?>("OrderNumber");
+                        response.Wares = basketProvider.GetOrders(confirmed, OrderNumber);
                     }
                     catch (Exception)
                     {

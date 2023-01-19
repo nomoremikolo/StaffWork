@@ -34,6 +34,13 @@ namespace StaffWork.Server.Provider
                 return response;
             }
 
+            if (userInDB.IsActivated == false)
+            {
+                response.StatusCode = 401;
+                response.Errors.Add("Your account is deactivated!");
+                return response;
+            }
+
             if (!hashHelper.VerifyHash(user.Password, userInDB.PasswordHash, userInDB.PasswordSalt))
             {
                 response.StatusCode = 401;
@@ -74,6 +81,13 @@ namespace StaffWork.Server.Provider
                 return response;
             }
 
+            if (existingUser.IsActivated == false)
+            {
+                response.StatusCode = 401;
+                response.Errors.Add("Your account is deactivated!");
+                return response;
+            }
+
             response.StatusCode = 200;
 
             var newRefreshToken = jwtUtils.GenerateJWTRefreshToken();
@@ -106,6 +120,14 @@ namespace StaffWork.Server.Provider
             {
                 response.StatusCode = 401;
                 response.Errors.Add("User is not found");
+                return response;
+            }
+
+
+            if (user.IsActivated == false)
+            {
+                response.StatusCode = 401;
+                response.Errors.Add("Your account is deactivated!");
                 return response;
             }
 

@@ -189,6 +189,28 @@ namespace StaffWork.Server.Providers
             }
             try
             {
+                if (wareModel.Thumbnail != null)
+                {
+                    wareModel.Thumbnail = SaveFile(wareModel.Thumbnail);
+                }
+                if (wareModel.Images != null)
+                {
+                    var imagesLinks = new List<string>();
+                    foreach (var item in wareModel.Images.Split(" "))
+                    {
+                        try
+                        {
+                            imagesLinks.Add(SaveFile(item));
+                        }
+                        catch (Exception)
+                        {
+                            return null;
+                            throw;
+                        }
+                    }
+                    wareModel.Images = String.Join(" ", imagesLinks);
+                }
+
                 response.Ware = wareDataProvider.UpdateWare(wareModel);
                 response.StatusCode = 200;
                 return response;

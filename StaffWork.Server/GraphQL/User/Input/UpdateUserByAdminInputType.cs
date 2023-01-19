@@ -35,6 +35,10 @@ namespace StaffWork.Server.GraphQL.User.Input
                 .Resolve(ctx => ctx.Source.Email);
 
             Field<StringGraphType, string?>()
+                .Name("Permissions")
+                .Resolve(ctx => ctx.Source.Permissions);
+
+            Field<StringGraphType, string?>()
                 .Name("Role")
                 .Resolve(ctx => ctx.Source.Role);
 

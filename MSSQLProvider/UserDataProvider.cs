@@ -156,12 +156,20 @@ namespace MSSQLProvider
             }
         }
 
-        public List<UserModel> GetUsers()
+        public List<UserModel> GetUsers(string? keyWords)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                return connection.Query<UserModel>(@"select * from [User] ORDER BY Name").ToList();
+                if (keyWords != null)
+                {
+                    return connection.Query<UserModel>($@"select * from [User] where username like N'%{keyWords}%' or name like N'%{keyWords}%' or surname like N'%{keyWords}%' or adress like N'%{keyWords}%' or email like N'%{keyWords}%' or role like N'%{keyWords}%' order by name").ToList();
+                }
+                else
+                {
+                    return connection.Query<UserModel>(@"select * from [User] order by name").ToList();
+                }
+
             }
         }
 
@@ -184,7 +192,8 @@ namespace MSSQLProvider
                     Email = @Email,
                     Role = @Role,
                     Permissions = @Permissions,
-                    RefreshToken = @RefreshToken
+                    RefreshToken = @RefreshToken,
+                    IsActivated = @IsActivated
                     WHERE 
                     Id = @Id",
                     new

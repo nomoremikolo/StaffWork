@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using BusinessLogic;
+using BusinessLogic.Enums;
 using GraphQL;
 using GraphQL.Types;
+using StaffWork.Server.GraphQL.User.Output;
 using StaffWork.Server.GraphQL.User.Types;
 using StaffWork.Server.JwtAuthorization;
 using StaffWork.Server.JwtAuthorization.Interfaces;
@@ -15,7 +17,8 @@ namespace StaffWork.Server.GraphQL.User
         {
 
             Field<NonNullGraphType<GetUsersResponseType>, GetUsersResponse>()
-                .Name("GetAll")
+                .Name("GetAll") 
+                .Argument<StringGraphType>("KeyWords")
                 .Resolve(context =>
                 {
                     var response = new GetUsersResponse();
@@ -31,7 +34,8 @@ namespace StaffWork.Server.GraphQL.User
 
                     try
                     {
-                        response.Users = userProvider.GetUsers();
+                        var keyWords = context.GetArgument<string?>("KeyWords");
+                        response.Users = userProvider.GetUsers(keyWords);
                     }
                     catch (Exception)
                     {
@@ -55,6 +59,34 @@ namespace StaffWork.Server.GraphQL.User
                     var userId = context.GetArgument<int>("UserId");
                     response = userProvider.GetUserById(userId);
 
+                    return response;
+                }
+                );
+
+            Field<NonNullGraphType<GetPermissionsQueryResponseType>, GetPermissionsQueryResponse>()
+                .Name("GetAllPermissions")
+                .Resolve(ctx =>
+                {
+                    var response = new GetPermissionsQueryResponse();
+                    var authorizationResponse = authorizationProvider.AuthorizeUser(httpContextAccessor.HttpContext, AuthorizationPolicies.Authorized);
+                    if (authorizationResponse.StatusCode != 200)
+                    {
+                        response.StatusCode = authorizationResponse.StatusCode;
+                        response.Errors = authorizationResponse.Errors;
+                        return response;
+                    }
+
+                    try
+                    {
+                        response.Permissions = authorizationProvider.GetAllPermissions();
+                    }
+                    catch (Exception)
+                    {
+                        response.StatusCode = 500;
+                        response.Errors.Add($"Database error");
+                        return response;
+                    }
+                    response.StatusCode = 200;
                     return response;
                 }
                 );

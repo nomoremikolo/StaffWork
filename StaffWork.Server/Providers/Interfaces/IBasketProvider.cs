@@ -14,6 +14,6 @@ namespace StaffWork.Server.Providers.Interfaces
         GetBasketWaresResponse GetAllBasketWares();
         CRUDBasketResponse GetBasketWareById(int wareId);
         GetBasketWaresResponse ConfirmOrder();
-        List<OrderGraph> GetOrders(bool? confirmedFilter);
+        List<OrderGraph> GetOrders(bool? confirmedFilter, string? orderNumber);
     }
 }
